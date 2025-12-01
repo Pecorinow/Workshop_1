@@ -1,0 +1,192 @@
+:root {
+    --twilight-header-light :#CE6A85;
+    --twilight-header-dark : #693D53;
+    --twilight-hexagone-light : rgba(206, 106, 133, 0.502); 
+    --twilight-hexagone-dark : rgba(105, 61, 83, 0.5);
+    --twilight-text : #5c374c;
+    --h2-color :#DE3F00;
+    --twilight-categoriesBurnout : #CC4510;
+    --btn-light: #FF7D4A;
+    --btn-dark: #C45124;
+    --btn-border:#F39D7B;
+    --btn-mode-border : #CEEFFA;
+
+    --text-a-font : "Kumbh Sans", sans-serif;
+    --h1-h2-font : "Inter", sans-serif;
+}
+
+.section-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap:2rem;
+    padding-bottom: 3.5rem;
+
+    div div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap:1rem;
+
+        i {
+            color: var(--h2-color);
+        }
+    }
+}
+
+.section-test {
+    width: 70%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;;
+    gap:2rem;
+    margin-bottom: 2rem;
+
+    form {
+        display:flex;
+        flex-direction: column;
+        gap: 3.5rem;
+
+        fieldset {
+            border-left : 2px solid var(--h2-color);
+            border-bottom: 2px solid var(--h2-color);
+            border-top:none;
+            border-right:none;
+            display: flex;
+            flex-direction: column;
+            padding : 2rem;
+
+            legend {
+                color:var(--h2-color);
+                font-size: 1.1rem;
+               
+            }
+
+            div {
+                display:flex;
+                flex-direction: row;
+                gap: 1rem;
+                padding:0.5rem;
+            }
+
+        }
+    }
+
+    
+
+}
+
+.section-resultats-hide {
+    display:none;
+}
+
+.section-resultats-show {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap:2rem;
+
+    .resultats {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap:2rem;
+
+        .hexagone {
+            position: relative;
+            
+
+            img {
+                width:150px;
+            }
+
+            .p-cat-pro {
+                position:absolute;
+                left:10%;
+                top:40%;
+                margin:auto;
+                color: var(--twilight-categoriesBurnout);
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            .p-cat-parent {
+                position:absolute;
+                left:25%;
+                top:40%;
+                margin:auto;
+                color: var(--twilight-categoriesBurnout);
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            .p-cat-rel {
+                position:absolute;
+                left:16%;
+                top:40%;
+                margin:auto;
+                color: var(--twilight-categoriesBurnout);
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            .p-cat-perso {
+                position:absolute;
+                left:20%;
+                top:40%;
+                margin:auto;
+                color: var(--twilight-categoriesBurnout);
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            .p-cat-post {
+                position:absolute;
+                left:8%;
+                top:40%;
+                margin:auto;
+                color: var(--twilight-categoriesBurnout);
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }
+
+        .moyenne-normal, .moyenne-aSurveiller, .moyenne-preoccupant { /*TODO après mettre les variantes selon la classe */
+            font-size:1.3rem;
+            font-style: italic;
+            border : 2px solid;
+            padding: 1rem;
+        }
+
+        .moyenne-normal {
+            color : green;
+            border : green;
+        }
+
+        .moyenne-aSurveiller {
+            color: var(--h2-color);
+            border: var(--h2-color);
+        }
+
+        .moyenne-preoccupant {
+            color: #780116;
+            border: #780116;
+        }
+
+        .niv-explication-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap:1rem;
+
+            .niv-normal, .niv-aSurveiller, .niv-preoccupant { /*TODO après mettre les variantes selon la classe */
+                font-size: 1.7rem;
+                font-weight: 500;
+            }
+        }
+
+
+
+    }
+}

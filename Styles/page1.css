@@ -1,0 +1,159 @@
+:root {
+    --twilight-header-light :#CE6A85;
+    --twilight-header-dark : #693D53;
+    --twilight-hexagone-light : rgb(206, 106, 133, 0.5); 
+    --twilight-hexagone-dark : rgba(105, 61, 83, 0.5);
+    --twilight-text : #5c374c;
+    --h2-color :#DE3F00;
+    --twilight-categoriesBurnout : #CC4510;
+    --btn-light: #FF7D4A;
+    --btn-dark: #C45124;
+    --btn-border:#F39D7B;
+    --btn-mode-border : #CEEFFA;
+
+    --text-a-font : "Kumbh Sans", sans-serif;
+    --h1-h2-font : "Inter", sans-serif;
+}
+
+main {
+    .section-intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap:2rem;
+        padding-bottom: 2rem;
+        width:80%;
+
+        p {
+            text-align: justify;
+        }
+
+        .hexaBurnouts {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap:1.5rem;
+
+            .hexagone {
+                position: relative;
+                
+                margin:auto;
+
+                img {
+                    width: 150px;
+                }
+
+                a {
+                    position:absolute;
+                    top:40%;
+                    margin:auto;
+                    
+                    text-decoration: none;
+                    color: var(--twilight-categoriesBurnout);
+                    font-size: 1.2rem;
+
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap:0.5rem;
+
+                    a:hover p {
+                        font-weight: bold;
+                    }
+                    
+                }
+              
+
+                .professionnel {
+                    position:absolute;
+                    left:10%;
+                }
+                .parental {
+                    position:absolute;
+                    left:25%;
+                }
+                .relationnel {
+                    position:absolute;
+                    left:16%;
+                }
+                .personnel {
+                    position:absolute;
+                    left:20%;
+                }
+                .post-masking {
+                    position:absolute;
+                    left:8%;
+                }
+            }
+            
+                
+        }
+    }
+
+    
+    .presentationsBurnouts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap:2rem;
+        width:100%;
+
+        .categoriesBurnout {
+            width:100%;
+            
+            .categorie {
+                display:flex;
+                flex-direction:row;
+                justify-content: space-between;
+                align-items: flex-start;
+                padding-top:3rem;
+                padding-bottom: 3rem;
+                padding-left:8rem;
+                padding-right:8rem;
+                gap:10%;
+                width:100%;
+
+                .icone-h3 {
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap:1rem;
+
+                    i {
+                        color : var(--h2-color);
+                        font-size: 2rem;
+                    }
+
+                    h3 {
+                        font-family: var(--text-a-font);
+                        font-size: 1.7rem;
+                        font-weight: 500;
+                        color: var(--h2-color); /*! Mettre dans twilight !*/
+                    }
+                }
+
+                .infoBurnout {
+                    max-width:80%;
+                }
+            }
+            .catPro, .catRel, .catPost {
+                background: linear-gradient(
+                    90deg,
+                    rgba(206, 106, 133, 0.5) 0%,
+                    rgba(152, 82, 119, 0.5) 100%
+                ); /* ! Mettre dans le mode twilight !*/
+            }
+
+            .catPar, .catPers {
+                background-color: white;
+            }
+
+            
+        }
+    }
+}

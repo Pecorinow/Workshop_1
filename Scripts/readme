@@ -1,0 +1,93 @@
+//---------------------------------------------
+//  Fonction : récupérer les réponses
+//---------------------------------------------
+
+function recupererReponses() {
+  const radiosCoches = document.querySelectorAll('input[type="radio"]:checked');
+
+  const reponses = {}; // { idQuestion : valeur }
+  radiosCoches.forEach(radio => {
+    reponses[radio.name] = Number(radio.value);
+  });
+
+  return reponses;
+};
+
+//---------------------------------------------
+//  Calcul des scores par catégories
+//---------------------------------------------
+
+function calculerScoresParCategories(reponses) {
+  const scores = {};         // { categorie : somme }
+  const compteQuestions = {}; // { categorie : nbQuestions }
+
+  // Parcours de chaque question
+  QUESTIONNAIRE.forEach(question => {
+    const id = question.id;
+    const valeur = reponses[id];
+
+    // Si la question n'a pas été répondue, on saute
+    if (valeur === undefined) return;
+
+    // Pour chaque catégorie associée à la question
+    question.categories.forEach(cat => {
+      if (!scores[cat]) {
+        scores[cat] = 0;
+        compteQuestions[cat] = 0;
+      }
+
+      scores[cat] += valeur;
+      compteQuestions[cat] += 1;
+    });
+  });
+
+  // Calcul de la moyenne
+  const resultats = {}; // { categorie : { somme, moyenne, statut } }
+
+  Object.keys(scores).forEach(cat => {
+    const somme = scores[cat];
+    const nb = compteQuestions[cat];
+    const moyenne = somme / nb;
+
+    // Détermination du statut
+    let statut;
+    if (moyenne <= 2) statut = "Normal";
+    else if (moyenne <= 3) statut = "À surveiller";
+    else statut = "Préoccupant";
+
+    resultats[cat] = { somme, moyenne, statut };
+  });
+
+  return resultats;
+}
+
+//---------------------------------------------
+//  Affichage
+//---------------------------------------------
+
+function afficherResultats(resultats) {
+  const div = document.getElementById('resultats');
+  div.innerHTML = "<h2>Vos résultats</h2>";
+
+  Object.entries(resultats).forEach(([categorie, data]) => {
+    const p = document.createElement('p');
+    p.innerHTML = `
+      <strong>${categorie}</strong> : 
+      somme = ${data.somme}, 
+      moyenne = ${data.moyenne.toFixed(2)} / 5 → 
+      <strong>${data.statut}</strong>
+    `;
+    div.appendChild(p);
+  });
+}
+//---------------------------------------
+// Lier le bouton à tout le reste :
+//---------------------------------------
+
+document.getElementById('btn-resultats').addEventListener('click', () => {
+  const reponses = recupererReponses(); 
+  const scores = calculerScoresParCategories(reponses);
+  afficherResultats(scores);
+});
+
+

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--liens CSS :-->
+    <link rel="stylesheet" href="../Styles/global.css">
+    <link rel="stylesheet" href="../Styles/page2.css">
+    <!--lien JS :-->
+    <script defer src="../Scripts/main.js" ></script>
+    <!--lien Fontawesome :-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Fonts :-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <title>Faire le test | Burn-out Radar</title>
+</head>
+<body class="twilight day night">
+
+    <header>
+        <img src="" alt="Logo du site">
+
+        <div class="titre-nav">
+            <h1>Burn-out Radar</h1>
+            <nav>
+                <a href="page1.html">ACCUEIL</a>
+                <a class="navPage" href="">FAIRE LE TEST</a>
+                <a href="page3.html">TROUVER UN ACCOMPAGNEMENT</a>
+                <a href="">RESSOURCES</a>
+            </nav>
+        </div>
+
+        <button class="mode">
+            <i class="btn-day fa-regular fa-sun"></i>
+            <i class="btn-twilight fa-solid fa-sun"></i>
+            <i class="btn-night fa-solid fa-moon"></i>
+        </button>
+
+        
+    </header>
+
+    <main>
+        <section class="section-intro">
+            <div>
+                <div>
+                    <i class="fa-solid fa-asterisk"></i>
+                    <h2>Que fait ce test ?</h2>
+                </div>
+                <p class="introExplication">Ce questionnaire de 35 questions sonde différentes formes du burn-out : professionnel, parental, relationnel, post-masking et mental/émotionnel.
+                </p>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-asterisk"></i>
+                    <h2>Comment y répondre ?</h2>
+                </div>
+                <p class="introExplication">Cochez la case qui vous semble la plus proche de votre situation actuelle. Si vous ne vous sentez pas concerné.e par la question, cochez la case “Jamais” ou “Très faible”. Il n’y a pas de bonne ou de mauvaise réponse à ce test. Répondez-y simplement en suivant votre ressenti.
+                </p>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-asterisk"></i>
+                    <h2>Que faire de mes résultats ?</h2>
+                </div>
+                <p class="introExplication">Considérez ce test comme un outil qui vous permet d’évaluer la possibilité d’un burn-out. Il ne peut en aucun cas servir de seul diagnoistique. Si vous obtenez un score élevé dans une ou plusieurs formes de burn-out, nous vous recommandons vivement de consulter un médecin ou un spécialiste de la santé mentale. En fin de test, vous aurez d’ailleurs la possibilité de rechercher un thérapeute spécialisé près de chez vous.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-test">
+            <form method="post" action="javascrit:void(0)" class="questionnaire" id="form-questionnaire">
+
+                <!-- Début des 35 questions -->
+
+                <!-- Question 1 -->
+                <!-- 
+                <fieldset class="question-reponses">
+                    <legend>J'ai l'impression qu'il m'est anormalement difficile de m'adapter aux autres</legend>
+                    <div class="reponses">
+                        <input id="jamais-q1" name="fatigue" value="1" type="radio">
+                        <label for="jamais-q1">Jamais</label>
+                    </div>
+                    <div class="reponses">
+                        <input id="tempsEnTemps-q1" name="fatigue" value="2" type="radio">
+                        <label for="tempsEnTemps-q1">De temps en temps</label>
+                    </div>
+                    <div class="reponses">
+                        <input id="parfois-q1" name="fatigue" value="3" type="radio">
+                        <label for="parfois-q1">Parfois</label>
+                    </div>
+                    <div class="reponses">
+                        <input id="souvent-q1" name="fatigue" value="4" type="radio">
+                        <label for="souvent-q1">Souvent</label>
+                    </div>
+                    <div class="reponses">
+                        <input id="toutLeTemps-q1" name="fatigue" value="5" type="radio">
+                        <label for="toutLeTemps-q1">Tout le temps</label>
+                    </div>
+                </fieldset>
+                -->
+
+            </form>
+
+            <button id="btn-resultats" type="button" class="btn"><span>Voir mes résultats</span></button>
+
+        </section>
+
+        <section id="section-resultats" class="section-resultats-hide">
+
+            <div class="resultats">
+                <div class="hexagone">
+                    <img src="../Images/hexagone-twilight.png" alt="Hexagone de couleur en fond de la catégorie de burn-out">
+                    <p class="p-cat-pro" id="p-cat-pro"></p>
+                </div>
+
+                <p class="" id="p-moyenne-pro"></p>
+
+                <div class="niv-explication-btn">
+                    <p class="" id="p-niv-pro"></p>
+                    <p class="p-explic-normal p-explic-aSurveiller p-explic-preoccupant" id="p-explic-pro"></p>
+
+                    <button type="button" class="btn-2"></button>
+                </div>
+            </div>
+
+            <div class="resultats">
+                <div class="hexagone">
+                    <img src="../Images/hexagone-twilight.png" alt="Hexagone de couleur en fond de la catégorie de burn-out">
+                    <p class="p-cat-parent" id="p-cat-parent"></p>
+                </div>
+
+                <p class="" id="p-moyenne-parent"></p>
+
+                <div class="niv-explication-btn">
+                    <p class="" id="p-niv-parent"></p>
+                    <p class="p-explic-normal p-explic-aSurveiller p-explic-preoccupant" id="p-explic-parent"></p>
+
+                    <button type="button" class="btn-2"></button>
+                </div>
+            </div>
+
+            <div class="resultats">
+                <div class="hexagone">
+                    <img src="../Images/hexagone-twilight.png" alt="Hexagone de couleur en fond de la catégorie de burn-out">
+                    <p class="p-cat-rel" id="p-cat-rel"></p>
+                </div>
+
+                <p class="" id="p-moyenne-rel"></p>
+
+                <div class="niv-explication-btn">
+                    <p class="" id="p-niv-rel"></p>
+                    <p class="p-explic-normal p-explic-aSurveiller p-explic-preoccupant" id="p-explic-rel"></p>
+
+                    <button type="button" class="btn-2"></button>
+                </div>
+            </div>
+
+            <div class="resultats">
+                <div class="hexagone">
+                    <img src="../Images/hexagone-twilight.png" alt="Hexagone de couleur en fond de la catégorie de burn-out">
+                    <p class="p-cat-perso" id="p-cat-perso"></p>
+                </div>
+
+                <p class="" id="p-moyenne-perso"></p>
+
+                <div class="niv-explication-btn">
+                    <p class="" id="p-niv-perso"></p>
+                    <p class="p-explic-normal p-explic-aSurveiller p-explic-preoccupant" id="p-explic-perso"></p>
+
+                    <button type="button" class="btn-2"></button>
+                </div>
+            </div>
+
+            <div class="resultats">
+                <div class="hexagone">
+                    <img src="../Images/hexagone-twilight.png" alt="Hexagone de couleur en fond de la catégorie de burn-out">
+                    <p class="p-cat-post" id="p-cat-post"></p>
+                </div>
+
+                <p class="" id="p-moyenne-post"></p>
+
+                <div class="niv-explication-btn">
+                    <p class="" id="p-niv-post"></p>
+                    <p class="p-explic-normal p-explic-aSurveiller p-explic-preoccupant" id="p-explic-post"></p>
+
+                    <button type="button" class="btn-2"></button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>

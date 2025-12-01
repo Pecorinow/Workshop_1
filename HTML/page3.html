@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--liens CSS :-->
+    <link rel="stylesheet" href="../Styles/global.css">
+    <link rel="stylesheet" href="../Styles/page3.css">
+    <!--lien JS :-->
+    <script defer src="../Scripts/page3.js" ></script>
+    <!--*liens Leaflet :-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!--lien Fontawesome :-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Fonts :-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <title>Trouver un accompagnement | Burn-out Radar</title>
+</head>
+<body class="twilight day night">
+
+    <header>
+        <img src="" alt="Logo du site">
+
+        <div class="titre-nav">
+            <h1>Burn-out Radar</h1>
+            <nav>
+                <a href="page1.html">ACCUEIL</a>
+                <a href="page2.html">FAIRE LE TEST</a>
+                <a class="navPage" href="">TROUVER UN ACCOMPAGNEMENT</a>
+                <a href="">RESSOURCES</a>
+            </nav>
+        </div>
+
+        <button class="mode">
+            <i class="btn-day fa-regular fa-sun"></i>
+            <i class="btn-twilight fa-solid fa-sun"></i>
+            <i class="btn-night fa-solid fa-moon"></i>
+        </button>
+
+        
+    </header>
+
+    <main>
+        <section class="recherche-psys">
+            <h2>Trouvez un thérapeute près de chez vous...</h2>
+            <form id="form-psys" method="post" action="javascript:void(0)" enctype="">
+                <fieldset>
+                    <label for="codePostal">Code postal</label>
+                    <input id="codePostal"
+                    name="codePostal"
+                    placeholder="1000"
+                    type="text"
+                    class="code-Postal"
+                    required>
+                </fieldset>
+                <fieldset>
+                    <label for="specialisation">Spécialisation</label>
+                    <select id="specialisation"
+                    name="specialisation"
+                    required>
+                    <option selected value="">Choisissez une option</option> <option value="professionnel">Burn-out professionnel</option> <option value="parental">Burn-out parental</option> <option value="relationnel">Burn-out relationnel</option> <option value="personnel">Burn-out personnel</option> <option value="postMasking">Burn-out post-masking</option>
+                    </select>
+                </fieldset>
+                
+                <button type="submit" id="btn-psys" class="btn">Afficher les thérapeutes</button>
+
+            </form>
+
+            <div class="carte" id="carte">
+
+            </div>
+        </section>
+    </main>
+
+<footer>
+
+</footer>
+
+</body>
+</html>

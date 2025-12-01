@@ -1,0 +1,155 @@
+
+[
+  {
+    "id": 1,
+    "nom": "Stefano Sogliani",
+    "adresse": "Rue du Marché au Charbon 62, Bruxelles",
+    "codePostal": "1000",
+    "latitude": 50.84694,
+    "longitude": 4.35032,
+    "specialites": ["professionnel", "relationnel"],
+    "telephone": "02 512 34 67"
+  },
+  {
+    "id": 2,
+    "nom": "Sophie Vandermeulen",
+    "adresse": "Avenue Louis Bertrand 54, Schaerbeek",
+    "codePostal": "1030",
+    "latitude": 50.86792,
+    "longitude": 4.38360,
+    "specialites": ["parental", "relationnel", "personnel"],
+    "telephone": "0478 52 09 86"
+  },
+  {
+    "id": 3,
+    "nom": "Isabel Marquez Avida",
+    "adresse": "Chaussée de Waterloo 713, Saint-Gilles",
+    "codePostal": "1060",
+    "latitude": 50.82187,
+    "longitude": 4.35240,
+    "specialites": ["professionnel", "parental", "relationnel"],
+    "telephone": "0484 45 96 50"
+  },
+  {
+    "id": 4,
+    "nom": "Didier Demoulin",
+    "adresse": "Rue de l'Église 80, Ixelles",
+    "codePostal": "1050",
+    "latitude": 50.82805,
+    "longitude": 4.37145,
+    "specialites": ["parental", "personnel"],
+    "telephone": "0463 28 87 12"
+  },
+  {
+    "id": 5,
+    "nom": "Isaline Dupont",
+    "adresse": "Rue Wayez 102, Anderlecht",
+    "codePostal": "1070",
+    "latitude": 50.84201,
+    "longitude": 4.31578,
+    "specialites": ["relationnel", "personnel", "post-masking"],
+    "telephone": "0498 66 29 04"
+  },
+  {
+    "id": 6,
+    "nom": "Samia Ben Ammar",
+    "adresse": "Avenue Louise 480, Bruxelles",
+    "codePostal": "1050",
+    "latitude": 50.82355,
+    "longitude": 4.37165,
+    "specialites": ["professionnel", "personnel"],
+    "telephone": "0474 70 07 99"
+  },
+  {
+    "id": 7,
+    "nom": "Adrien Seghers",
+    "adresse": "Boulevard Emile Bockstael 250, Laeken",
+    "codePostal": "1020",
+    "latitude": 50.87538,
+    "longitude": 4.34609,
+    "specialites": ["parental", "personnel", "relationnel", "post-masking"],
+    "telephone": "0495 36 19 24"
+  },
+  {
+    "id": 8,
+    "nom": "Daria Popa",
+    "adresse": "Avenue Rogier 215, Schaerbeek",
+    "codePostal": "1030",
+    "latitude": 50.86570,
+    "longitude": 4.37788,
+    "specialites": ["parental", "relationnel"],
+    "telephone": "02 734 69 19"
+  },
+  {
+    "id": 9,
+    "nom": "Linh Truong",
+    "adresse": "Rue Léon Théodor 111, Jette",
+    "codePostal": "1090",
+    "latitude": 50.87307,
+    "longitude": 4.32254,
+    "specialites": ["parental", "personnel", "relationnel", "post-masking"],
+    "telephone": "0481 18 15 83"
+  },
+  {
+    "id": 10,
+    "nom": "Samuel Bocarne",
+    "adresse": "Rue de la Station 124, Etterbeek",
+    "codePostal": "1040",
+    "latitude": 50.83502,
+    "longitude": 4.39164,
+    "specialites": ["parental", "relationnel"],
+    "telephone": "0479 41 52 90"
+  },
+  {
+    "id": 11,
+    "nom": "Claire Lesage",
+    "adresse": "Avenue de l'Héliport 10, Molenbeek-Saint-Jean",
+    "codePostal": "1080",
+    "latitude": 50.85752,
+    "longitude": 4.29045,
+    "specialites": ["parental", "relationnel", "post-masking"],
+    "telephone": "02 522 34 56"
+  },
+  {
+    "id": 12,
+    "nom": "Amina El-Masri",
+    "adresse": "Rue du Trône 20, Ixelles",
+    "codePostal": "1050",
+    "latitude": 50.83245,
+    "longitude": 4.36718,
+    "specialites": ["professionnel", "personnel"],
+    "telephone": "02 733 22 11"
+  },
+  {
+    "id": 13,
+    "nom": "Giulia Romano",
+    "adresse": "Avenue de Tervuren 129, Woluwe-Saint-Pierre",
+    "codePostal": "1150",
+    "latitude": 50.84833,
+    "longitude": 4.39218,
+    "specialites": ["relationnel", "professionnel"],
+    "telephone": "02 512 23 45"
+  },
+  {
+    "id": 14,
+    "nom": "Antony Cardoso",
+    "adresse": "Place des Gueux 5, Saint-Josse-ten-Noode",
+    "codePostal": "1210",
+    "latitude": 50.85557,
+    "longitude": 4.36891,
+    "specialites": ["personnel", "post-masking", "parental"],
+    "telephone": "02 518 36 45"
+  },
+  {
+    "id": 15,
+    "nom": "Lina Petrova",
+    "adresse": "Rue de la Clef 33, Schaerbeek",
+    "codePostal": "1030",
+    "latitude": 50.87649,
+    "longitude": 4.37311,
+    "specialites": ["professionnel", "relationnel"],
+    "telephone": "02 644 99 87"
+  }
+]
+
+
