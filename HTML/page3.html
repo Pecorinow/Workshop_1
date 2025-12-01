@@ -34,38 +34,43 @@
             </nav>
         </div>
 
-        <button class="mode">
-            <i class="btn-day fa-regular fa-sun"></i>
-            <i class="btn-twilight fa-solid fa-sun"></i>
-            <i class="btn-night fa-solid fa-moon"></i>
-        </button>
+        <div class="buttons-mode-burger">
+            <button class="mode">
+                <i class="btn-day fa-regular fa-sun"></i>
+                <i class="btn-twilight fa-solid fa-sun"></i>
+                <i class="btn-night fa-solid fa-moon"></i>
+            </button>
+            <button class="burgerNav"><i class="fa-solid fa-bars"></i></button>
+        </div>
 
         
     </header>
 
     <main>
-        <section class="recherche-psys">
+        <section class="section-recherche-psys">
             <h2>Trouvez un thérapeute près de chez vous...</h2>
             <form id="form-psys" method="post" action="javascript:void(0)" enctype="">
-                <fieldset>
-                    <label for="codePostal">Code postal</label>
-                    <input id="codePostal"
-                    name="codePostal"
-                    placeholder="1000"
-                    type="text"
-                    class="code-Postal"
-                    required>
-                </fieldset>
-                <fieldset>
-                    <label for="specialisation">Spécialisation</label>
-                    <select id="specialisation"
-                    name="specialisation"
-                    required>
-                    <option selected value="">Choisissez une option</option> <option value="professionnel">Burn-out professionnel</option> <option value="parental">Burn-out parental</option> <option value="relationnel">Burn-out relationnel</option> <option value="personnel">Burn-out personnel</option> <option value="postMasking">Burn-out post-masking</option>
-                    </select>
-                </fieldset>
+                <div>
+                    <fieldset>
+                        <label for="codePostal">Code postal</label>
+                        <input id="codePostal"
+                        name="codePostal"
+                        placeholder="1000"
+                        type="text"
+                        class="code-Postal"
+                        required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="specialisation">Spécialisation</label>
+                        <select id="specialisation"
+                        name="specialisation"
+                        required>
+                        <option selected value="">Choisissez une option</option> <option value="professionnel">Burn-out professionnel</option> <option value="parental">Burn-out parental</option> <option value="relationnel">Burn-out relationnel</option> <option value="personnel">Burn-out personnel</option> <option value="postMasking">Burn-out post-masking</option>
+                        </select>
+                    </fieldset>
+                </div>
                 
-                <button type="submit" id="btn-psys" class="btn">Afficher les thérapeutes</button>
+                <button type="submit" id="btn-psys" class="btn"><span>Afficher les thérapeutes</span></button>
 
             </form>
 

@@ -430,7 +430,7 @@ function recupReponses() {
 // Fonction calculerScores :
 
 function calculerScores(REPONSES) { // On met REPONSES entre les () pcq REPONSES = paramètre de la fonction = truc à partir duquel on va calculer les scores
-// TODO voir avec Aude, on n'a jamais mis de trucs entre () en cours
+
     // Création de l'objet CAT_SCORES = scores par catégorie (mais pas encore les moyennes), avec  :
     const CAT_SCORES = {};
 
@@ -552,91 +552,133 @@ function afficherResultats(RESULTATS) {
 //* Fonction appliquerClasses :
 //*----------------------------
 
-function appliquerClasses(RESULTATS) {
+function appliquerClasses(RESULTATS) { // TODO Aude help
   //* Le premier code que j'avais écrit ressemblait à ça, c'était correct mais ça allait être super répétitif :
-  P_MOYENNE_PRO.classList.remove('niv-normal','moyenne-aSurveiller', 'moyenne-preoccupant');
-  P_NIV_PRO.classList.remove('niv-normal', 'niv-aSurveiller', 'niv-preoccupant');
-  P_MOYENNE_PAR.classList.remove('niv-normal', 'moyenne-aSurveiller', 'moyenne-preoccupant');
-  P_NIV_PAR.classList.remove('niv-normal', 'niv-aSurveiller', 'niv-preoccupant');
-  P_MOYENNE_REL.classList.remove('niv-normal', 'moyenne-aSurveiller', 'moyenne-preoccupant');
-  P_NIV_REL.classList.remove('niv-normal', 'niv-aSurveiller', 'niv-preoccupant');
-  P_MOYENNE_PERS.classList.remove('niv-normal', 'moyenne-aSurveiller', 'moyenne-preoccupant');
-  P_NIV_PERS.classList.remove('niv-normal', 'niv-aSurveiller', 'niv-preoccupant');
-  P_MOYENNE_POST.classList.remove('niv-normal', 'moyenne-aSurveiller', 'moyenne-preoccupant');
-  P_NIV_POST.classList.remove('niv-normal', 'niv-aSurveiller', 'niv-preoccupant');
 
-  if (RESULTATS['professionnel'].NIVEAU_INTERP.value === "Normal") {
+  const CATEGORIES = ['pro', 'parent', 'rel', 'perso', 'post'];
+  CATEGORIES.forEach(cat => {
+    const P_MOYENNE_CAT = document.querySelector(`#p-moyenne-${cat}`);
+    P_MOYENNE_CAT.classList.remove('moyenne-normal','moyenne-aSurveiller', 'moyenne-preoccupant');
+
+    const P_NIV_CAT = document.querySelector(`#p-niv-${cat}`);
+    P_NIV_CAT.classList.remove('niv-normal', 'niv-aSurveiller', 'niv-preoccupant');
+
+  })
+
+
+  const CLASSES_NIV_MOY = {
+    "Normal" : {
+      moyenne : 'moyenne-normal',
+      niveau : 'niv-normal'
+    },
+    "À surveiller" : {
+      moyenne : 'moyenne-aSurveiller',
+      niveau : 'niv-aSurveiller'
+    },
+    "Préoccupant" : {
+      moyenne : 'moyenne-preoccupant',
+      niveau : 'niv-preoccupant'
+    }
+  }
+  
+  const NIV_PRO = RESULTATS['professionnel'].NIVEAU_INTERP;
+  // Si NIV_PRO = "Normal" 
+  //  P_MOYENNE_PRO.classList.add( CLASSES_NIV_MOY["Normal"].moyenne);
+  P_MOYENNE_PRO.classList.add( CLASSES_NIV_MOY[NIV_PRO].moyenne);
+  P_NIV_PRO.classList.add(CLASSES_NIV_MOY[NIV_PRO].niveau); 
+
+  const NIV_PAR = RESULTATS['parental'].NIVEAU_INTERP;
+  // Si NIV_PRO = "Normal" 
+  //  P_MOYENNE_PRO.classList.add( CLASSES_NIV_MOY["Normal"].moyenne);
+  P_MOYENNE_PAR.classList.add( CLASSES_NIV_MOY[NIV_PAR].moyenne);
+  P_NIV_PAR.classList.add(CLASSES_NIV_MOY[NIV_PAR].niveau); 
+
+  const NIV_REL = RESULTATS['relationnel'].NIVEAU_INTERP;
+  // Si NIV_PRO = "Normal" 
+  //  P_MOYENNE_PRO.classList.add( CLASSES_NIV_MOY["Normal"].moyenne);
+  P_MOYENNE_REL.classList.add( CLASSES_NIV_MOY[NIV_REL].moyenne);
+  P_NIV_REL.classList.add(CLASSES_NIV_MOY[NIV_REL].niveau); 
+
+  const NIV_PERS = RESULTATS['personnel'].NIVEAU_INTERP;
+  // Si NIV_PRO = "Normal" 
+  //  P_MOYENNE_PRO.classList.add( CLASSES_NIV_MOY["Normal"].moyenne);
+  P_MOYENNE_PERS.classList.add( CLASSES_NIV_MOY[NIV_PERS].moyenne);
+  P_NIV_PERS.classList.add(CLASSES_NIV_MOY[NIV_PERS].niveau); 
+
+
+  if (RESULTATS['professionnel'].NIVEAU_INTERP === "Normal") {
       P_MOYENNE_PRO.classList.add('moyenne-normal');
       P_NIV_PRO.classList.add('niv-normal'); 
   }  
-  if (RESULTATS['professionnel'].NIVEAU_INTERP.value === "À surveiller") {
+  if (RESULTATS['professionnel'].NIVEAU_INTERP === "À surveiller") {
       P_MOYENNE_PRO.classList.add('moyenne-aSurveiller');
       P_NIV_PRO.classList.add('niv-aSurveiller');
   }  
-  if (RESULTATS['professionnel'].NIVEAU_INTERP.value === "Préoccupant") {
+  if (RESULTATS['professionnel'].NIVEAU_INTERP === "Préoccupant") {
       P_MOYENNE_PRO.classList.add('moyenne-preoccupant');
       P_NIV_PRO.classList.add('niv-preoccupant');
   }
 
-  if (RESULTATS['parental'].NIVEAU_INTERP.value === "Normal") {
+  if (RESULTATS['parental'].NIVEAU_INTERP === "Normal") {
       P_MOYENNE_PAR.classList.add('moyenne-normal');
       P_NIV_PAR.classList.add('niv-normal');
   }
-  if (RESULTATS['parental'].NIVEAU_INTERP.value === "À surveiller") {
+  if (RESULTATS['parental'].NIVEAU_INTERP === "À surveiller") {
       P_MOYENNE_PAR.classList.add('moyenne-aSurveiller');
       P_NIV_PAR.classList.add('niv-aSurveiller');
   }
-  if (RESULTATS['parental'].NIVEAU_INTERP.value === "Préoccupant") {
+  if (RESULTATS['parental'].NIVEAU_INTERP === "Préoccupant") {
       P_MOYENNE_PAR.classList.add('moyenne-preoccupant');
       P_NIV_PAR.classList.add('niv-preoccupant');
   }
 
 
-  if (RESULTATS['relationnel'].NIVEAU_INTERP.value === "Normal") {
+  if (RESULTATS['relationnel'].NIVEAU_INTERP === "Normal") {
     P_MOYENNE_REL.classList.add('moyenne-normal');
     P_NIV_REL.classList.add('niv-normal');
   }
-  if (RESULTATS['relationnel'].NIVEAU_INTERP.value === "À surveiller") {
+  if (RESULTATS['relationnel'].NIVEAU_INTERP === "À surveiller") {
     P_MOYENNE_REL.classList.add('moyenne-aSurveiller');
     P_NIV_REL.classList.add('niv-aSurveiller');
   }
-  if (RESULTATS['relationnel'].NIVEAU_INTERP.value === "Préoccupant") {
+  if (RESULTATS['relationnel'].NIVEAU_INTERP === "Préoccupant") {
     P_MOYENNE_REL.classList.add('moyenne-preoccupant');
     P_NIV_REL.classList.add('niv-preoccupant');
   }
 
 
-  if (RESULTATS['personnel'].NIVEAU_INTERP.value === "Normal") {
+  if (RESULTATS['personnel'].NIVEAU_INTERP === "Normal") {
     P_MOYENNE_PERS.classList.add('moyenne-normal');
     P_NIV_PERS.classList.add('niv-normal');
   }
-  if (RESULTATS['personnel'].NIVEAU_INTERP.value === "À surveiller") {
+  if (RESULTATS['personnel'].NIVEAU_INTERP === "À surveiller") {
     P_MOYENNE_PERS.classList.add('moyenne-aSurveiller');
     P_NIV_PERS.classList.add('niv-aSurveiller');
   }
-  if (RESULTATS['personnel'].NIVEAU_INTERP.value === "Préoccupant") {
+  if (RESULTATS['personnel'].NIVEAU_INTERP === "Préoccupant") {
     P_MOYENNE_PERS.classList.add('moyenne-preoccupant');
     P_NIV_PERS.classList.add('niv-preoccupant');
   }
 
 
-  if (RESULTATS['postMasking'].NIVEAU_INTERP.value === "Normal") {
+  if (RESULTATS['postMasking'].NIVEAU_INTERP === "Normal") {
     P_MOYENNE_POST.classList.add('moyenne-normal');
     P_NIV_POST.classList.add('niv-normal');
   }
 
-  if (RESULTATS['postMasking'].NIVEAU_INTERP.value === "À surveiller") {
+  if (RESULTATS['postMasking'].NIVEAU_INTERP === "À surveiller") {
     P_MOYENNE_POST.classList.add('moyenne-aSurveiller');
     P_NIV_POST.classList.add('niv-aSurveiller');
   }
 
-  if (RESULTATS['postMasking'].NIVEAU_INTERP.value === "Préoccupant") {
+  if (RESULTATS['postMasking'].NIVEAU_INTERP === "Préoccupant") {
     P_MOYENNE_POST.classList.add('moyenne-preoccupant');
     P_NIV_POST.classList.add('niv-preoccupant');
   }
 }
 
-  //* ALORS QUE :
+//TODO nope ça ne marche pas mais Aude si jamais
+  //* ALORS QUE : 
   // 1) On enlève toutes les classes précédentes pour les différentes catégories = l'équivalent du premier bloc que j'avais écrit, mais en mieux :
 //     const CATEGORIES = [
 //       'pro', 'parent', 'rel', 'perso', 'post'
