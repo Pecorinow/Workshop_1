@@ -116,7 +116,7 @@ main {
                 display:flex;
                 flex-direction:row;
                 justify-content: space-between;
-                align-items: flex-start;
+                align-items: center;
                 padding-top:3rem;
                 padding-bottom: 3rem;
                 padding-left:8rem;
@@ -124,25 +124,36 @@ main {
                 gap:10%;
                 width:100%;
 
-                .icone-h3 {
+                .icone-h3-img {
                     display:flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    align-items: flex-start;
-                    gap:1rem;
+                    align-items: center;
+                    gap:2rem;
+                    
 
-                    i {
-                        color : var(--h2-color);
-                        font-size: 2rem;
-                    }
-
-                    h3 {
-                        font-family: var(--text-a-font);
-                        font-size: 1.7rem;
-                        font-weight: 500;
-                        color: var(--h2-color); /*! Mettre dans twilight !*/
+                    .icone-h3 {
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        gap:1rem;
+    
+                        i {
+                            color : var(--h2-color);
+                            font-size: 2rem;
+                        }
+    
+                        h3 {
+                            font-family: var(--text-a-font);
+                            font-size: 1.7rem;
+                            font-weight: 500;
+                            color: var(--h2-color); /*! Mettre dans twilight !*/
+                        }
                     }
                 }
+
+                
 
                 .infoBurnout {
                     max-width:80%;

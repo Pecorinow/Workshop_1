@@ -553,7 +553,7 @@ function afficherResultats(RESULTATS) {
 //*----------------------------
 
 function appliquerClasses(RESULTATS) { // TODO Aude help
-  //* Le premier code que j'avais écrit ressemblait à ça, c'était correct mais ça allait être super répétitif :
+  
 
   const CATEGORIES = ['pro', 'parent', 'rel', 'perso', 'post'];
   CATEGORIES.forEach(cat => {
@@ -605,111 +605,86 @@ function appliquerClasses(RESULTATS) { // TODO Aude help
   P_MOYENNE_PERS.classList.add( CLASSES_NIV_MOY[NIV_PERS].moyenne);
   P_NIV_PERS.classList.add(CLASSES_NIV_MOY[NIV_PERS].niveau); 
 
+  const NIV_POST = RESULTATS['personnel'].NIVEAU_INTERP;
+  // Si NIV_PRO = "Normal" 
+  //  P_MOYENNE_PRO.classList.add( CLASSES_NIV_MOY["Normal"].moyenne);
+  P_MOYENNE_POST.classList.add( CLASSES_NIV_MOY[NIV_POST].moyenne);
+  P_NIV_POST.classList.add(CLASSES_NIV_MOY[NIV_POST].niveau);
+  
+};
 
-  if (RESULTATS['professionnel'].NIVEAU_INTERP === "Normal") {
-      P_MOYENNE_PRO.classList.add('moyenne-normal');
-      P_NIV_PRO.classList.add('niv-normal'); 
-  }  
-  if (RESULTATS['professionnel'].NIVEAU_INTERP === "À surveiller") {
-      P_MOYENNE_PRO.classList.add('moyenne-aSurveiller');
-      P_NIV_PRO.classList.add('niv-aSurveiller');
-  }  
-  if (RESULTATS['professionnel'].NIVEAU_INTERP === "Préoccupant") {
-      P_MOYENNE_PRO.classList.add('moyenne-preoccupant');
-      P_NIV_PRO.classList.add('niv-preoccupant');
-  }
+//* Le premier code que j'avais écrit ressemblait à ça, c'était correct mais ça allait être super répétitif :
+//   if (RESULTATS['professionnel'].NIVEAU_INTERP === "Normal") {
+//       P_MOYENNE_PRO.classList.add('moyenne-normal');
+//       P_NIV_PRO.classList.add('niv-normal'); 
+//   }  
+//   if (RESULTATS['professionnel'].NIVEAU_INTERP === "À surveiller") {
+//       P_MOYENNE_PRO.classList.add('moyenne-aSurveiller');
+//       P_NIV_PRO.classList.add('niv-aSurveiller');
+//   }  
+//   if (RESULTATS['professionnel'].NIVEAU_INTERP === "Préoccupant") {
+//       P_MOYENNE_PRO.classList.add('moyenne-preoccupant');
+//       P_NIV_PRO.classList.add('niv-preoccupant');
+//   }
 
-  if (RESULTATS['parental'].NIVEAU_INTERP === "Normal") {
-      P_MOYENNE_PAR.classList.add('moyenne-normal');
-      P_NIV_PAR.classList.add('niv-normal');
-  }
-  if (RESULTATS['parental'].NIVEAU_INTERP === "À surveiller") {
-      P_MOYENNE_PAR.classList.add('moyenne-aSurveiller');
-      P_NIV_PAR.classList.add('niv-aSurveiller');
-  }
-  if (RESULTATS['parental'].NIVEAU_INTERP === "Préoccupant") {
-      P_MOYENNE_PAR.classList.add('moyenne-preoccupant');
-      P_NIV_PAR.classList.add('niv-preoccupant');
-  }
-
-
-  if (RESULTATS['relationnel'].NIVEAU_INTERP === "Normal") {
-    P_MOYENNE_REL.classList.add('moyenne-normal');
-    P_NIV_REL.classList.add('niv-normal');
-  }
-  if (RESULTATS['relationnel'].NIVEAU_INTERP === "À surveiller") {
-    P_MOYENNE_REL.classList.add('moyenne-aSurveiller');
-    P_NIV_REL.classList.add('niv-aSurveiller');
-  }
-  if (RESULTATS['relationnel'].NIVEAU_INTERP === "Préoccupant") {
-    P_MOYENNE_REL.classList.add('moyenne-preoccupant');
-    P_NIV_REL.classList.add('niv-preoccupant');
-  }
+//   if (RESULTATS['parental'].NIVEAU_INTERP === "Normal") {
+//       P_MOYENNE_PAR.classList.add('moyenne-normal');
+//       P_NIV_PAR.classList.add('niv-normal');
+//   }
+//   if (RESULTATS['parental'].NIVEAU_INTERP === "À surveiller") {
+//       P_MOYENNE_PAR.classList.add('moyenne-aSurveiller');
+//       P_NIV_PAR.classList.add('niv-aSurveiller');
+//   }
+//   if (RESULTATS['parental'].NIVEAU_INTERP === "Préoccupant") {
+//       P_MOYENNE_PAR.classList.add('moyenne-preoccupant');
+//       P_NIV_PAR.classList.add('niv-preoccupant');
+//   }
 
 
-  if (RESULTATS['personnel'].NIVEAU_INTERP === "Normal") {
-    P_MOYENNE_PERS.classList.add('moyenne-normal');
-    P_NIV_PERS.classList.add('niv-normal');
-  }
-  if (RESULTATS['personnel'].NIVEAU_INTERP === "À surveiller") {
-    P_MOYENNE_PERS.classList.add('moyenne-aSurveiller');
-    P_NIV_PERS.classList.add('niv-aSurveiller');
-  }
-  if (RESULTATS['personnel'].NIVEAU_INTERP === "Préoccupant") {
-    P_MOYENNE_PERS.classList.add('moyenne-preoccupant');
-    P_NIV_PERS.classList.add('niv-preoccupant');
-  }
+//   if (RESULTATS['relationnel'].NIVEAU_INTERP === "Normal") {
+//     P_MOYENNE_REL.classList.add('moyenne-normal');
+//     P_NIV_REL.classList.add('niv-normal');
+//   }
+//   if (RESULTATS['relationnel'].NIVEAU_INTERP === "À surveiller") {
+//     P_MOYENNE_REL.classList.add('moyenne-aSurveiller');
+//     P_NIV_REL.classList.add('niv-aSurveiller');
+//   }
+//   if (RESULTATS['relationnel'].NIVEAU_INTERP === "Préoccupant") {
+//     P_MOYENNE_REL.classList.add('moyenne-preoccupant');
+//     P_NIV_REL.classList.add('niv-preoccupant');
+//   }
 
 
-  if (RESULTATS['postMasking'].NIVEAU_INTERP === "Normal") {
-    P_MOYENNE_POST.classList.add('moyenne-normal');
-    P_NIV_POST.classList.add('niv-normal');
-  }
+//   if (RESULTATS['personnel'].NIVEAU_INTERP === "Normal") {
+//     P_MOYENNE_PERS.classList.add('moyenne-normal');
+//     P_NIV_PERS.classList.add('niv-normal');
+//   }
+//   if (RESULTATS['personnel'].NIVEAU_INTERP === "À surveiller") {
+//     P_MOYENNE_PERS.classList.add('moyenne-aSurveiller');
+//     P_NIV_PERS.classList.add('niv-aSurveiller');
+//   }
+//   if (RESULTATS['personnel'].NIVEAU_INTERP === "Préoccupant") {
+//     P_MOYENNE_PERS.classList.add('moyenne-preoccupant');
+//     P_NIV_PERS.classList.add('niv-preoccupant');
+//   }
 
-  if (RESULTATS['postMasking'].NIVEAU_INTERP === "À surveiller") {
-    P_MOYENNE_POST.classList.add('moyenne-aSurveiller');
-    P_NIV_POST.classList.add('niv-aSurveiller');
-  }
 
-  if (RESULTATS['postMasking'].NIVEAU_INTERP === "Préoccupant") {
-    P_MOYENNE_POST.classList.add('moyenne-preoccupant');
-    P_NIV_POST.classList.add('niv-preoccupant');
-  }
-}
+//   if (RESULTATS['postMasking'].NIVEAU_INTERP === "Normal") {
+//     P_MOYENNE_POST.classList.add('moyenne-normal');
+//     P_NIV_POST.classList.add('niv-normal');
+//   }
 
-//TODO nope ça ne marche pas mais Aude si jamais
-  //* ALORS QUE : 
-  // 1) On enlève toutes les classes précédentes pour les différentes catégories = l'équivalent du premier bloc que j'avais écrit, mais en mieux :
-//     const CATEGORIES = [
-//       'pro', 'parent', 'rel', 'perso', 'post'
-//     ];
+//   if (RESULTATS['postMasking'].NIVEAU_INTERP === "À surveiller") {
+//     P_MOYENNE_POST.classList.add('moyenne-aSurveiller');
+//     P_NIV_POST.classList.add('niv-aSurveiller');
+//   }
 
-//     CATEGORIES.forEach(categorie => {
-//       document.getElementById(`p-moyenne-${categorie}`).classList.remove(
-//           'moyenne-normal', 'moyenne-aSurveiller', 'moyenne-preoccupant'
-//       );
-//       document.getElementById(`p-niv-${categorie}`).classList.remove(
-//           'niv-normal', 'niv-aSurveiller', 'niv-preoccupant'
-//       );
-//     });
-
-//     // 2) On applique les classes selon le niveau de chaque catégorie
-//     CATEGORIES.forEach(categorie => {
-//         const NIVEAU = RESULTATS[cat].NIVEAU_INTERP; // On récupère le niveau pour chaque catégorie
-
-//         // 3) On vérifie le niveau et on applique les classes appropriées
-//         if (NIVEAU === "Normal") {
-//             document.getElementById(`p-moyenne-${categorie}`).classList.add('moyenne-normal');
-//             document.getElementById(`p-niv-${categorie}`).classList.add('niv-normal');
-//         } else if (NIVEAU === "aSurveiller") {
-//             document.getElementById(`p-moyenne-${categorie}`).classList.add('moyenne-aSurveiller');
-//             document.getElementById(`p-niv-${categorie}`).classList.add('niv-aSurveiller');
-//         } else if (NIVEAU === "preoccupant") {
-//             document.getElementById(`p-moyenne-${categorie}`).classList.add('moyenne-preoccupant');
-//             document.getElementById(`p-niv-${categorie}`).classList.add('niv-preoccupant');
-//         }
-//     });
+//   if (RESULTATS['postMasking'].NIVEAU_INTERP === "Préoccupant") {
+//     P_MOYENNE_POST.classList.add('moyenne-preoccupant');
+//     P_NIV_POST.classList.add('niv-preoccupant');
+//   }
 // }
+
 
 
 //--------------------------------------------

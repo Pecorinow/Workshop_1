@@ -104,7 +104,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        gap:2rem;
+        gap:3rem;
 
         .hexagone {
             position: relative;
@@ -170,17 +170,17 @@
 
         .moyenne-normal {
             color : green;
-            border : green;
+            border-color: green;
         }
 
         .moyenne-aSurveiller {
             color: var(--h2-color);
-            border: var(--h2-color);
+            border-color: var(--h2-color);
         }
 
         .moyenne-preoccupant {
-            color: #780116;
-            border: #780116;
+            color: #e6002a;
+            border-color: #e6002a;
         }
 
         .niv-explication-btn {
@@ -193,6 +193,18 @@
             .niv-normal, .niv-aSurveiller, .niv-preoccupant { /*TODO après mettre les variantes selon la classe */
                 font-size: 1.7rem;
                 font-weight: 500;
+            }
+
+            .niv-normal {
+                color : green;
+            }
+
+            .niv-aSurveiller {
+                color: var(--h2-color);
+            }
+
+            .niv-preoccupant {
+                color: #e6002a;
             }
         }
 

@@ -98,46 +98,67 @@ header {
         }
     }
 
-    .mode {
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap:0.5rem;
-        padding:.0.5rem;
-        background-color: white;
-        border-top:none;
-        border-right:none;
-        border-left:none;
-        border-bottom:6px solid var(--btn-mode-border);
-        padding:10px;
-        border-radius: 50px;
+    .buttons-mode-burger {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap:1rem;
 
-        i {
-            color : grey;
-            font-size: 1.5rem;
+        .mode {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap:0.5rem;
+            padding:.0.5rem;
+            background-color: white;
+            border-top:none;
+            border-right:none;
+            border-left:none;
+            border-bottom:6px solid var(--btn-mode-border);
+            padding:10px;
+            border-radius: 50px;
+
+            i {
+                color : grey;
+                font-size: 1.5rem;
+            }
+
+            .btn-day:hover {
+                color:#7fc5df;
+            }
+
+            .btn-twilight:hover {
+                color: var(--twilight-header-light);
+            }
+
+            .btn-night:hover {
+                color: #0251b7;
+            }
+
         }
 
-        .btn-day:hover {
-            color:#7fc5df;
+        .mode:active {
+            position:relative;
+            top:2px;
+            border-bottom:4px solid var(--btn-mode-border);
         }
 
-        .btn-twilight:hover {
-            color: var(--twilight-header-light);
+        .burgerNav {
+            position: absolute;
+            right:+10px;
+            top: -25px;
+            font-size: 2rem;
+            color:white;
+            border:1px solid var(--twilight-hexagone-light);
+            border-radius : 7px;
+            background-color: transparent;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            /*display:none;*/
         }
-
-        .btn-night:hover {
-            color: #0251b7;
-        }
-
     }
-
-    .mode:active {
-        position:relative;
-        top:2px;
-        border-bottom:4px solid var(--btn-mode-border);
-    }
-    
 }
 
 h1 {
@@ -264,11 +285,6 @@ footer {
             }
         }
 
-        .buttons-mode-burger {
-            display:flex;
-            flex-direction: column;
-            /*TODO j'atais ici*/
-        }
     }
 
     .copyrights {
@@ -283,9 +299,10 @@ footer {
     }
 }
 
-@media (max-width:950px) {
-
+@media (max-width:959px) {
+    header /* TODO Mettre un toggle hbide/show sur la nav en JS !*/
 }
+
 
 
 
