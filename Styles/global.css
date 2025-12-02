@@ -86,7 +86,6 @@ header {
             a {
                 color:white;
                 text-decoration: none;
-                
                 text-align: center;
             }
 
@@ -156,7 +155,7 @@ header {
             background-color: transparent;
             padding-left: 0.5rem;
             padding-right: 0.5rem;
-            /*display:none;*/
+            display:none;
         }
     }
 }
@@ -300,7 +299,18 @@ footer {
 }
 
 @media (max-width:959px) {
-    header /* TODO Mettre un toggle hbide/show sur la nav en JS !*/
+    header .titre-nav .nav-hide {
+        display:none;
+    } /* TODO Mettre un toggle hide/show sur la nav en JS dans un fichier main.js ! */
+
+    header .titre-nav .nav-show {
+        /*TODO voir dans Adopte Un Vieux pour le display:flex */
+    }
+
+    header .buttons-mode-burger .burgerNav {
+        display:flex;
+    }
+
 }
 
 

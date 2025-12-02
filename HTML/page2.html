@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../Styles/global.css">
     <link rel="stylesheet" href="../Styles/page2.css">
     <!--lien JS :-->
-    <script defer src="../Scripts/main.js" ></script>
+    <script defer src="../Scripts/page2.js" ></script>
     <!--lien Fontawesome :-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Fonts :-->
@@ -23,7 +23,7 @@
 
         <div class="titre-nav">
             <h1>Burn-out Radar</h1>
-            <nav>
+            <nav class="nav-hide">
                 <a href="page1.html">ACCUEIL</a>
                 <a class="navPage" href="">FAIRE LE TEST</a>
                 <a href="page3.html">TROUVER UN ACCOMPAGNEMENT</a>
@@ -31,11 +31,14 @@
             </nav>
         </div>
 
-        <button class="mode">
-            <i class="btn-day fa-regular fa-sun"></i>
-            <i class="btn-twilight fa-solid fa-sun"></i>
-            <i class="btn-night fa-solid fa-moon"></i>
-        </button>
+        <div class="buttons-mode-burger"> <!--Ajouter div buttons-mode-burger-->
+            <button class="mode">
+                <i class="btn-day fa-regular fa-sun"></i>
+                <i class="btn-twilight fa-solid fa-sun"></i>
+                <i class="btn-night fa-solid fa-moon"></i>
+            </button>
+            <button class="burgerNav"><i class="fa-solid fa-bars"></i></button> <!--Ajouter button burgerNav-->
+        </div>
 
         
     </header>
