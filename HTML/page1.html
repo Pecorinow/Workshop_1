@@ -21,7 +21,7 @@
 
         <div class="titre-nav">
             <h1>Burn-out Radar</h1>
-            <nav>
+            <nav class="nav-hide">
                 <a class="navPage" href="">ACCUEIL</a>
                 <a href="page2.html">FAIRE LE TEST</a>
                 <a href="page3.html">TROUVER UN ACCOMPAGNEMENT</a>
@@ -29,11 +29,14 @@
             </nav>
         </div>
 
-        <button class="mode">
-            <i class="btn-day fa-regular fa-sun"></i>
-            <i class="btn-twilight fa-solid fa-sun"></i>
-            <i class="btn-night fa-solid fa-moon"></i>
-        </button>
+        <div class="buttons-mode-burger"> <!--Ajouter div buttons-mode-burger-->
+            <button class="mode">
+                <i class="btn-day fa-regular fa-sun"></i>
+                <i class="btn-twilight fa-solid fa-sun"></i>
+                <i class="btn-night fa-solid fa-moon"></i>
+            </button>
+            <button class="burgerNav"><i class="fa-solid fa-bars"></i></button> <!--Ajouter button burgerNav-->
+        </div>
 
         
     </header>
@@ -47,7 +50,7 @@
 
             <button type="submit" class="btn"><a href="page2.html">Je fais le test</a></button>
 
-            <div class="hexaBurnouts">
+            <div class="hexaBurnouts"> <!--Mettre les hexagones dans la section 2 ?-->
                 <div class="hexagone">
                     <img src="../Images/hexagone-twilight.png" alt="Hexagone de couleur en fond de la catégorie de burn-out"> 
                     <a href="#infoPro" class="professionnel">
