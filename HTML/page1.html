@@ -6,6 +6,8 @@
     <!--liens CSS :-->
     <link rel="stylesheet" href="../Styles/global.css">
     <link rel="stylesheet" href="../Styles/page1.css">
+    <!--lien JS :-->
+    <script defer src="../Scripts/main.js" ></script>
     <!--lien Fontawesome :-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Fonts :-->
@@ -21,7 +23,7 @@
 
         <div class="titre-nav">
             <h1>Burn-out Radar</h1>
-            <nav class="nav-hide">
+            <nav id="nav" class="nav-hide"> <!--Ajouter classe nav-hide et nav-show en CSS pour toggle en JS-->
                 <a class="navPage" href="">ACCUEIL</a>
                 <a href="page2.html">FAIRE LE TEST</a>
                 <a href="page3.html">TROUVER UN ACCOMPAGNEMENT</a>
@@ -35,7 +37,7 @@
                 <i class="btn-twilight fa-solid fa-sun"></i>
                 <i class="btn-night fa-solid fa-moon"></i>
             </button>
-            <button class="burgerNav"><i class="fa-solid fa-bars"></i></button> <!--Ajouter button burgerNav-->
+            <button id="menu" class="burgerNav"><i class="fa-solid fa-bars"></i></button> <!--Ajouter button burgerNav-->
         </div>
 
         
@@ -222,7 +224,7 @@
         <div class="footer-logo-titre-nav">
 
             <div class="titre-nav">
-                <h1>Aller voir :</h1>
+                <h1>Navigation</h1>
                 <nav>
                     <a class="navPage" href="">ACCUEIL</a>
                     <a href="page2.html">FAIRE LE TEST</a>
