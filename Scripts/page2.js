@@ -432,46 +432,51 @@ function recupReponses() {
 
 function calculerScores(REPONSES) { 
 
-    //! Création de l'objet CAT_SCORES = scores par catégorie (mais pas encore les moyennes), avec  :
+  //*1) Création d'un objet pour stocker les scores par catégorie :
+    // objet CAT_SCORES = scores par catégorie (mais pas encore les moyennes), avec  :
     const CAT_SCORES = {};
-
+  
+  //*2) Parcours des questions
     QUESTIONNAIRE.forEach(questionObj => {
-      //! = Pour chaque question du tableau QUESTIONNAIRE...
-      const VALEUR = REPONSES[questionObj.id]; //! ...on crée une variable VALEUR qui a comme propriété l'id des questions pour chaque valeur cochée (contenues dans REPONSES), et qui sert à APPELER la VALUE contenue dans REPONSES. = On appelle les valeurs cochées.
-     
+      // = Pour chaque question du tableau QUESTIONNAIRE...
+      //* a) On récupère la valeur cochée grâce à l'ID de la question :
+      const VALEUR = REPONSES[questionObj.id]; // ...on crée une variable VALEUR qui a comme propriété l'id des questions pour chaque valeur cochée (contenues dans REPONSES), et qui sert à APPELER la VALUE contenue dans REPONSES. = On appelle les valeurs cochées.
       
+      // Si pas de valeur trouvée -> question suivante
       if (!VALEUR) { 
         return };
-
+      
+      //* b) On parcourt les catégories liées à cette question : (création, initialisation, incrémentation)
       questionObj.categories.forEach(cat => {
-        //! = Pour chaque catégorie de l'objet questionObj...
+        // = Pour chaque catégorie de l'objet questionObj...
         if (!CAT_SCORES[cat]) {
           CAT_SCORES[cat] = {
             TOTAL: 0, 
             NB_QUESTION: 0 }; 
-        } //! = ...si cette catégorie n'a pas encore été rencontrée dans CAT_SCORES, alors on la crée en initialisant son TOTAL à 0, et son NB _QUETION à 0 (parce que, comme c'es la première fois qu'on la rencontre, elle n'a pas encore de TOTAL ni de NB_QUESTION).
+        } // = ...si cette catégorie n'a pas encore été rencontrée dans CAT_SCORES, alors on la crée en initialisant son TOTAL à 0, et son NB _QUESTION à 0 (parce que, comme c'es la première fois qu'on la rencontre, elle n'a pas encore de TOTAL ni de NB_QUESTION).
 
         CAT_SCORES[cat].TOTAL += VALEUR;
         CAT_SCORES[cat].NB_QUESTION += 1;
-      }); //! ...puis, dans tous les cas, le total de cette catégorie est augmenté de la valeur cochée, et le nombre de question dans cette catégorie est augmenté de 1.
+      }); // ...puis, dans tous les cas, le total de cette catégorie est augmenté de la valeur cochée, et le nombre de question dans cette catégorie est augmenté de 1.
     });
 
-    //! Maintenant, transformer les totaux (de TOTAL) en moyennes :
-    //! Création de l'objet RESULTATS, qui va contenir 1) la moyenne des scores par catégorie et 2) le niveau d'interprétation de ces moyennes :
+
+  //* 3) Transformer les totaux (de TOTAL) en moyennes :
+    //* a) Création de l'objet RESULTATS, qui va contenir 1) la moyenne des scores par catégorie et 2) le niveau d'interprétation de ces moyennes :
     const RESULTATS = {}; 
     
-
+    //* b) On parcourt chaque catégorie de CAT_SCORES :
     Object.keys(CAT_SCORES).forEach(cat => { // Object.keys(CAT_SCORES) = appelle toutes les propriétés (ou 'keys', clefs) de l'objet CAT_SCORES (donc appelera "professionnel", "parental"...)
     
-    //! = Pour chaque catégorie contenue dans l'objet CAT_SCORES...
+    //* c) = Pour chaque catégorie contenue dans l'objet CAT_SCORES...
       const TOTAL = CAT_SCORES[cat].TOTAL;
       const NB_QUESTION = CAT_SCORES[cat].NB_QUESTION;
-        //! = ... on crée les variables TOTAL et NB_QUESTION, à partir des propriétés du même nom, contenues dans CAT_SCORES.
+        // = ... on crée les variables TOTAL et NB_QUESTION, à partir des propriétés du même nom, contenues dans CAT_SCORES.
         
       const MOYENNE = TOTAL / NB_QUESTION;
-        //! ...et on crée la variable MOYENNE, qui correspond au nombre contenu dans la variable TOTAL / le nombre contenu dans la variable NB_CONTENU.
+        // ...et on crée la variable MOYENNE, qui correspond au nombre contenu dans la variable TOTAL / le nombre contenu dans la variable NB_CONTENU.
 
-      //! Et sur base de cette moyenne, on crée un niveau d'interprétation des résultats :
+      // Et sur base de cette moyenne, on crée un niveau d'interprétation des résultats :
       let niveau = "";
       let explic = "";
       if (MOYENNE <= 2) {
@@ -494,6 +499,7 @@ function calculerScores(REPONSES) {
 
     console.log(RESULTATS);
 
+  //* 4) On transmet RESULTATS à afficherResultats pour les afficher :
     afficherResultats(RESULTATS);
 };
 
