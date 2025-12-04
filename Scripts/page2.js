@@ -394,23 +394,24 @@ console.log(P_CAT_PRO, P_MOYENNE_PRO, P_NIV_PRO, P_EXPLIC_PRO, P_CAT_PRO, P_MOYE
 //Fonction recupReponses :
 
 function recupReponses() {
-    // Création de la variable RADIO_COCHES qui reprend juste tous les inputs radio cochés :
+    // !Création de la variable RADIO_COCHES qui reprend juste tous les inputs radio cochés :
     const RADIO_COCHES = document.querySelectorAll('input[type="radio"]:checked');
 
-    // Création d'un objet REPONSES pour y mettre les valeurs cochées pour chaque question :
+    // !Création d'un objet REPONSES pour y mettre les valeurs cochées pour chaque question :
     const REPONSES = {} // d'abord vide, sera rempli après.
 
     RADIO_COCHES.forEach(radio => {
       REPONSES[radio.name] = Number(radio.value);
-      // = Pour chaque input radio, dans l'objet REPONSES, on met la propriété correspondant à radio.name (= l'id des questions) et on leur donne comme valeur celle des inputs cochés.
+      //! = Pour chaque input radio, dans l'objet REPONSES, on met la propriété correspondant à radio.name (= l'id des questions) et on leur donne comme valeur celle des inputs cochés.
       //* Les [] donnent accès à la VALEUR contenue dans la propriété radio.name de l'objet REPONSES sans avoir écrire le nom de cette propriété.
       // Ex : au lieu d'écrire chaque fois REPONSES['travail_epuisant'], REPONSES['isolement']... pour appeler la valeur correspondantes, on décide juste de stocker toutes ces propriétés différentes sous un même nom, entre [].
     });
 
     console.log(REPONSES); // pour vérifier, on sait jamais
 
+    //! Fonction calculerScores en fonction des valeurs cochées :
     calculerScores(REPONSES); //* Attention : on avait appelé cette fonction en-dehors de recupReponses et ça faisait tout planter !
-    // POURQUOI : pcq REPONSES n'existe que dans recupReponses => on doit exécuter calculerScores DANS recupReponses, pour que calculerScores sache à quoi correspond REPONSES !
+    //* POURQUOI : pcq REPONSES n'existe que dans recupReponses => on doit exécuter calculerScores DANS recupReponses, pour que calculerScores sache à quoi correspond REPONSES !
 };
 
 
@@ -431,12 +432,12 @@ function recupReponses() {
 
 function calculerScores(REPONSES) { // On met REPONSES entre les () pcq REPONSES = paramètre de la fonction = truc à partir duquel on va calculer les scores
 
-    // Création de l'objet CAT_SCORES = scores par catégorie (mais pas encore les moyennes), avec  :
+    //! Création de l'objet CAT_SCORES = scores par catégorie (mais pas encore les moyennes), avec  :
     const CAT_SCORES = {};
 
     QUESTIONNAIRE.forEach(questionObj => {
-      // = Pour chaque question du tableau QUESTIONNAIRE...
-      const VALEUR = REPONSES[questionObj.id]; // ...on crée une variable VALEUR qui a comme propriété l'id des questions pour chaque valeur cochée (contenues dans REPONSES), et qui sert à APPELER la VALUE contenue dans REPONSES. = On appelle les valeurs cochées.
+      //! = Pour chaque question du tableau QUESTIONNAIRE...
+      const VALEUR = REPONSES[questionObj.id]; //! ...on crée une variable VALEUR qui a comme propriété l'id des questions pour chaque valeur cochée (contenues dans REPONSES), et qui sert à APPELER la VALUE contenue dans REPONSES. = On appelle les valeurs cochées.
       // = version raccourcie de REPONSES[questionObj.id], on pourrait écrire ça à la place mais VALEUR est plus compréhensible.
       
       if (!VALEUR) { 
