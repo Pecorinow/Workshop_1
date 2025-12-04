@@ -436,7 +436,7 @@ function calculerScores(REPONSES) {
     // objet CAT_SCORES = scores par catégorie (mais pas encore les moyennes), avec  :
     const CAT_SCORES = {};
   
-  //*2) Parcours des questions
+  //*2) Parcours des questions :
     QUESTIONNAIRE.forEach(questionObj => {
       // = Pour chaque question du tableau QUESTIONNAIRE...
       //* a) On récupère la valeur cochée grâce à l'ID de la question :
