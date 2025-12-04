@@ -45,7 +45,7 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            gap:2rem;
+            gap:2.5rem;
             padding-bottom: 2rem;
             width:100%;
 
@@ -93,15 +93,44 @@
     
             }
     
-            .carte {
-                width: 80%;
-                height: 400px;
-                margin-top: 20px;
-                border-radius: 10px;
+            
+        }       
+    }
+
+    .carte {
+        width: 90%;
+        height: 450px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+}
+
+/**--------------------*/
+/** Mediaquery 959px : */
+/**--------------------*/
+
+@media (max-width:959px) {
+    .section-recherche-psys {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap:1rem;
+        padding-bottom: 2rem;
+
+        .img-form-carte {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 5rem;
+            padding-bottom: 1rem;
+            width:100%;
+
+            img {
+            width:50%;
             }
         }
-
-       
     }
 }
 

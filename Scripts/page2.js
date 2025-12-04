@@ -440,14 +440,14 @@ function calculerScores(REPONSES) { // On met REPONSES entre les () pcq REPONSES
       // = version raccourcie de REPONSES[questionObj.id], on pourrait écrire ça à la place mais VALEUR est plus compréhensible.
       
       if (!VALEUR) { 
-        return };// TODO proposé par ChatGPT comme sécurité supplémentaire : normalement tout est répondu grâce à validerQuestionnaire(), demander à Aude si c'est nécesssaire
+        return };// sécurité supplémentaire : normalement tout est répondu grâce à validerQuestionnaire()
 
       questionObj.categories.forEach(cat => {
         // = Pour chaque catégorie de l'objet questionObj...
         if (!CAT_SCORES[cat]) {
           CAT_SCORES[cat] = {
             TOTAL: 0, 
-            NB_QUESTION: 0 }; // TODO écriture plus rapide proposée par ChatGPT (à la place de const TOTAL = 0 et const NB_QUESTION = 0), vérifier avec Aude.
+            NB_QUESTION: 0 }; // écriture plus rapide (à la place de const TOTAL = 0 et const NB_QUESTION = 0).
         } // = ...si cette catégorie n'a pas encore été rencontrée dans CAT_SCORES, alors on la crée en initialisant son TOTAL à 0, et son NB _QUETION à 0 (parce que, comme c'es la première fois qu'on la rencontre, elle n'a pas encore de TOTAL ni de NB_QUESTION).
 
         CAT_SCORES[cat].TOTAL += VALEUR;
@@ -467,7 +467,7 @@ function calculerScores(REPONSES) { // On met REPONSES entre les () pcq REPONSES
     Object.keys(CAT_SCORES).forEach(cat => { // Object.keys(CAT_SCORES) = appelle toutes les propriétés (ou 'keys', clefs) de l'objet CAT_SCORES (donc appelera "professionnel", "parental"...)
     // TODO On avait d'abord essayé ça avec un for... in : 
       // for (let cat in CAT_SCORES) {}
-    // TODO ...mais Object.keys est plus propre, dixit ChatGPT, à voir avec Aude.
+    // TODO ...mais Object.keys est plus propre.
     // = Pour chaque catégorie contenue dans l'objet CAT_SCORES...
       const TOTAL = CAT_SCORES[cat].TOTAL;
       const NB_QUESTION = CAT_SCORES[cat].NB_QUESTION;
@@ -552,7 +552,7 @@ function afficherResultats(RESULTATS) {
 //* Fonction appliquerClasses :
 //*----------------------------
 
-function appliquerClasses(RESULTATS) { // TODO Aude help
+function appliquerClasses(RESULTATS) {
   
 
   const CATEGORIES = ['pro', 'parent', 'rel', 'perso', 'post'];

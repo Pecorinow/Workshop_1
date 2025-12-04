@@ -113,7 +113,6 @@ h2 {
         .hexagone {
             position: relative;
             
-
             img {
                 width:150px;
             }
@@ -192,7 +191,7 @@ h2 {
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
-            gap:1rem;
+            gap:0.5rem;
 
             .niv-normal, .niv-aSurveiller, .niv-preoccupant { /*TODO après mettre les variantes selon la classe */
                 font-size: 1.7rem;
@@ -214,5 +213,22 @@ h2 {
 
 
 
+    }
+}
+
+/**--------------------*/
+/** Mediaquery 959px : */
+/**--------------------*/
+
+@media (max-width:959px) {
+    .section-test {
+    width: 90%;
+    }
+    .section-resultats-show .resultats {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap:0.8rem;
     }
 }

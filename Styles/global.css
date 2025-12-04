@@ -402,7 +402,15 @@ footer {
     }
 }
 
+/**--------------------*/
+/** Mediaquery px : */
+/**--------------------*/
 
+@media (max-width:375px) {
+    header .buttons-mode-burger {
+        gap:8rem;
+    }
+}
 
 
     
