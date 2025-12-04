@@ -430,7 +430,7 @@ function recupReponses() {
 
 // Fonction calculerScores :
 
-function calculerScores(REPONSES) { // On met REPONSES entre les () pcq REPONSES = paramètre de la fonction = truc à partir duquel on va calculer les scores
+function calculerScores(REPONSES) { 
 
     //! Création de l'objet CAT_SCORES = scores par catégorie (mais pas encore les moyennes), avec  :
     const CAT_SCORES = {};
@@ -438,44 +438,36 @@ function calculerScores(REPONSES) { // On met REPONSES entre les () pcq REPONSES
     QUESTIONNAIRE.forEach(questionObj => {
       //! = Pour chaque question du tableau QUESTIONNAIRE...
       const VALEUR = REPONSES[questionObj.id]; //! ...on crée une variable VALEUR qui a comme propriété l'id des questions pour chaque valeur cochée (contenues dans REPONSES), et qui sert à APPELER la VALUE contenue dans REPONSES. = On appelle les valeurs cochées.
-      // = version raccourcie de REPONSES[questionObj.id], on pourrait écrire ça à la place mais VALEUR est plus compréhensible.
+     
       
       if (!VALEUR) { 
-        return };// sécurité supplémentaire : normalement tout est répondu grâce à validerQuestionnaire()
+        return };
 
       questionObj.categories.forEach(cat => {
-        // = Pour chaque catégorie de l'objet questionObj...
+        //! = Pour chaque catégorie de l'objet questionObj...
         if (!CAT_SCORES[cat]) {
           CAT_SCORES[cat] = {
             TOTAL: 0, 
-            NB_QUESTION: 0 }; // écriture plus rapide (à la place de const TOTAL = 0 et const NB_QUESTION = 0).
-        } // = ...si cette catégorie n'a pas encore été rencontrée dans CAT_SCORES, alors on la crée en initialisant son TOTAL à 0, et son NB _QUETION à 0 (parce que, comme c'es la première fois qu'on la rencontre, elle n'a pas encore de TOTAL ni de NB_QUESTION).
+            NB_QUESTION: 0 }; 
+        } //! = ...si cette catégorie n'a pas encore été rencontrée dans CAT_SCORES, alors on la crée en initialisant son TOTAL à 0, et son NB _QUETION à 0 (parce que, comme c'es la première fois qu'on la rencontre, elle n'a pas encore de TOTAL ni de NB_QUESTION).
 
         CAT_SCORES[cat].TOTAL += VALEUR;
         CAT_SCORES[cat].NB_QUESTION += 1;
-      }); // ...puis, dans tous les cas, le total de cette catégorie est augmenté de la valeur cochée, et le nombre de question dans cette catégorie est augmenté de 1.
-    });//* Attention : on avait mis ces deux lignes dans un else {} par réflexe, mais ça voulait alors dire "si la catégorie n'existe pas, on la crée, et sinon on augmente total et nbquestion" et du coup on n'augmentait jamais les catégories qui venaient d'être créés.
+      }); //! ...puis, dans tous les cas, le total de cette catégorie est augmenté de la valeur cochée, et le nombre de question dans cette catégorie est augmenté de 1.
+    });
 
-    // Maintenant, transformer les totaux (de TOTAL) en moyennes :
-    // Création de l'objet RESULTATS, qui va contenir 1) la moyenne des scores par catégorie et 2) le niveau d'interprétation de ces moyennes :
+    //! Maintenant, transformer les totaux (de TOTAL) en moyennes :
+    //! Création de l'objet RESULTATS, qui va contenir 1) la moyenne des scores par catégorie et 2) le niveau d'interprétation de ces moyennes :
     const RESULTATS = {}; 
-    // La structure finale ressemblerait à :
-    // RESULTATS = {
-    //   postMasking: { moyenne: 3.4, niveau: "Préoccupant" },
-    //   personnel: { moyenne: 2.1, niveau: "À surveiller" }
-    // }
+    
 
     Object.keys(CAT_SCORES).forEach(cat => { // Object.keys(CAT_SCORES) = appelle toutes les propriétés (ou 'keys', clefs) de l'objet CAT_SCORES (donc appelera "professionnel", "parental"...)
-    // TODO On avait d'abord essayé ça avec un for... in : 
-      // for (let cat in CAT_SCORES) {}
-    // TODO ...mais Object.keys est plus propre.
+    
     // = Pour chaque catégorie contenue dans l'objet CAT_SCORES...
       const TOTAL = CAT_SCORES[cat].TOTAL;
       const NB_QUESTION = CAT_SCORES[cat].NB_QUESTION;
         // = ... on crée les variables TOTAL et NB_QUESTION, à partir des propriétés du même nom, contenues dans CAT_SCORES.
-        // ChatGPT m'a proposé une version raccourcie :
-        //const { TOTAL, NB_QUESTION } = CAT_SCORES[cat];
-        // mais c'était moins lisible donc nope.
+        
       const MOYENNE = TOTAL / NB_QUESTION;
         // ...et on crée la variable MOYENNE, qui correspond au nombre contenu dans la variable TOTAL / le nombre contenu dans la variable NB_CONTENU.
 
@@ -703,3 +695,85 @@ BTN_RESULTS.addEventListener ('click', () => {
     // Attention : mettre les toggle à l'intérieur de validerQuestionnaire, sinon les hexagones apparaissent d'office au clic du bouton, que le questionnaire soit validé ou non !
   }
 });
+
+
+
+
+
+
+
+
+// function calculerScores(REPONSES) { // On met REPONSES entre les () pcq REPONSES = paramètre de la fonction = truc à partir duquel on va calculer les scores
+
+//   //! Création de l'objet CAT_SCORES = scores par catégorie (mais pas encore les moyennes), avec  :
+//   const CAT_SCORES = {};
+
+//   QUESTIONNAIRE.forEach(questionObj => {
+//     //! = Pour chaque question du tableau QUESTIONNAIRE...
+//     const VALEUR = REPONSES[questionObj.id]; //! ...on crée une variable VALEUR qui a comme propriété l'id des questions pour chaque valeur cochée (contenues dans REPONSES), et qui sert à APPELER la VALUE contenue dans REPONSES. = On appelle les valeurs cochées.
+//     // = version raccourcie de REPONSES[questionObj.id], on pourrait écrire ça à la place mais VALEUR est plus compréhensible.
+    
+//     if (!VALEUR) { 
+//       return };// sécurité supplémentaire : normalement tout est répondu grâce à validerQuestionnaire()
+
+//     questionObj.categories.forEach(cat => {
+//       //! = Pour chaque catégorie de l'objet questionObj...
+//       if (!CAT_SCORES[cat]) {
+//         CAT_SCORES[cat] = {
+//           TOTAL: 0, 
+//           NB_QUESTION: 0 }; // écriture plus rapide (à la place de const TOTAL = 0 et const NB_QUESTION = 0).
+//       } //! = ...si cette catégorie n'a pas encore été rencontrée dans CAT_SCORES, alors on la crée en initialisant son TOTAL à 0, et son NB _QUETION à 0 (parce que, comme c'es la première fois qu'on la rencontre, elle n'a pas encore de TOTAL ni de NB_QUESTION).
+
+//       CAT_SCORES[cat].TOTAL += VALEUR;
+//       CAT_SCORES[cat].NB_QUESTION += 1;
+//     }); //! ...puis, dans tous les cas, le total de cette catégorie est augmenté de la valeur cochée, et le nombre de question dans cette catégorie est augmenté de 1.
+//   });//* Attention : on avait mis ces deux lignes dans un else {} par réflexe, mais ça voulait alors dire "si la catégorie n'existe pas, on la crée, et sinon on augmente total et nbquestion" et du coup on n'augmentait jamais les catégories qui venaient d'être créés.
+
+//   //! Maintenant, transformer les totaux (de TOTAL) en moyennes :
+//   //! Création de l'objet RESULTATS, qui va contenir 1) la moyenne des scores par catégorie et 2) le niveau d'interprétation de ces moyennes :
+//   const RESULTATS = {}; 
+//   // La structure finale ressemblerait à :
+//   // RESULTATS = {
+//   //   postMasking: { moyenne: 3.4, niveau: "Préoccupant" },
+//   //   personnel: { moyenne: 2.1, niveau: "À surveiller" }
+//   // }
+
+//   Object.keys(CAT_SCORES).forEach(cat => { // Object.keys(CAT_SCORES) = appelle toutes les propriétés (ou 'keys', clefs) de l'objet CAT_SCORES (donc appelera "professionnel", "parental"...)
+//   // TODO On avait d'abord essayé ça avec un for... in : 
+//     // for (let cat in CAT_SCORES) {}
+//   // TODO ...mais Object.keys est plus propre.
+//   // = Pour chaque catégorie contenue dans l'objet CAT_SCORES...
+//     const TOTAL = CAT_SCORES[cat].TOTAL;
+//     const NB_QUESTION = CAT_SCORES[cat].NB_QUESTION;
+//       // = ... on crée les variables TOTAL et NB_QUESTION, à partir des propriétés du même nom, contenues dans CAT_SCORES.
+//       // ChatGPT m'a proposé une version raccourcie :
+//       //const { TOTAL, NB_QUESTION } = CAT_SCORES[cat];
+//       // mais c'était moins lisible donc nope.
+//     const MOYENNE = TOTAL / NB_QUESTION;
+//       // ...et on crée la variable MOYENNE, qui correspond au nombre contenu dans la variable TOTAL / le nombre contenu dans la variable NB_CONTENU.
+
+//     // Et sur base de cette moyenne, on crée un niveau d'interprétation des résultats :
+//     let niveau = "";
+//     let explic = "";
+//     if (MOYENNE <= 2) {
+//       niveau = "Normal";
+//       explic = "Vos résultats semblent dans la norme. Toutefois, si vous ressentez malgré tout une fatigue excessive ou un sentiment de trop-plein, nous vous invitons à contacter un spécialiste près de chez vous, ou à appeler le numéro spécial de SOS Burn-out 081/39.72.00.";
+//     } else if (MOYENNE <= 3) {
+//       niveau = "À surveiller";
+//       explic = "Vous semblez présenter quelques symptomes de burn-out. Si votre fatigue persiste ou s'accentue, nous vous invitons à contacter un spécialiste près de chez vous, ou à appeler le numéro spécial de SOS Burn-out 081/39.72.00.";
+//     } else {
+//       niveau = "Préoccupant";
+//       explic = "Votre niveau de stress dans cette catégorie apparaît très élevé. Bien que ce test n'ait pas vocation de diagnostic médical, nous vous invitons à réagir le plus tôt possible en vous en ouvrant à vos proches ou à un spécialiste près de chez vous, ou appeler le numéro spécial de SOS Burn-out 081/39.72.00.";
+//     }
+
+//     RESULTATS[cat] = {
+//       MOYENNE: Number(MOYENNE.toFixed(2)),
+//       NIVEAU_INTERP : niveau,
+//       EXPLIC : explic
+//     }; // = Chaque catégorie de l'objet RESULTATS a 3 propriétés : MOYENNE (qui renvoie un nombre), NIVEAU_INTERP (qui renvoie la valeur contenue dans la variable niveau), et EXPLIC qui contient l'explication de chaque niveau.
+//   });
+
+//   console.log(RESULTATS);
+
+//   afficherResultats(RESULTATS);
+// };
