@@ -463,15 +463,15 @@ function calculerScores(REPONSES) {
 
     Object.keys(CAT_SCORES).forEach(cat => { // Object.keys(CAT_SCORES) = appelle toutes les propriétés (ou 'keys', clefs) de l'objet CAT_SCORES (donc appelera "professionnel", "parental"...)
     
-    // = Pour chaque catégorie contenue dans l'objet CAT_SCORES...
+    //! = Pour chaque catégorie contenue dans l'objet CAT_SCORES...
       const TOTAL = CAT_SCORES[cat].TOTAL;
       const NB_QUESTION = CAT_SCORES[cat].NB_QUESTION;
-        // = ... on crée les variables TOTAL et NB_QUESTION, à partir des propriétés du même nom, contenues dans CAT_SCORES.
+        //! = ... on crée les variables TOTAL et NB_QUESTION, à partir des propriétés du même nom, contenues dans CAT_SCORES.
         
       const MOYENNE = TOTAL / NB_QUESTION;
-        // ...et on crée la variable MOYENNE, qui correspond au nombre contenu dans la variable TOTAL / le nombre contenu dans la variable NB_CONTENU.
+        //! ...et on crée la variable MOYENNE, qui correspond au nombre contenu dans la variable TOTAL / le nombre contenu dans la variable NB_CONTENU.
 
-      // Et sur base de cette moyenne, on crée un niveau d'interprétation des résultats :
+      //! Et sur base de cette moyenne, on crée un niveau d'interprétation des résultats :
       let niveau = "";
       let explic = "";
       if (MOYENNE <= 2) {
