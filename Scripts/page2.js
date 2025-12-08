@@ -10,63 +10,63 @@ const QUESTIONNAIRE = [
   // 1
   {
     id: 'adaptation_difficile',
-    question: "J'ai l'impression qu'il m'est anormalement difficile de m'adapter aux autres",
+    question: "J'ai l'impression qu'il m'est anormalement difficile de m'adapter aux autres.",
     categories: ['postMasking', 'relationnel'],
     typeReponse: 'accord'
   },
   // 2
   {
     id: 'epuise_matin_travail',
-    question: "En me levant, je me sens déjà épuisé(e) à l'idée d'une autre journée de travail",
+    question: "En me levant, je me sens déjà épuisé·e à l'idée d'une autre journée de travail.",
     categories: ['professionnel'],
     typeReponse: 'frequence'
   },
   // 3
   {
     id: 'honte_parent',
-    question: "J'ai honte du parent que je suis devenu",
+    question: "J'ai honte du parent que je suis devenu·e.",
     categories: ['parental'],
     typeReponse: 'accord'
   },
   // 4
   {
     id: 'travail_emotionnellement_epuisant',
-    question: "Mon travail est émotionnellement épuisant à un degré",
+    question: "Mon travail est émotionnellement épuisant à un degré...",
     categories: ['professionnel'],
     typeReponse: 'intensite'
   },
   // 5
   {
     id: 'perte_interet',
-    question: "J'ai perdu mon intérêt pour des situations qui m'intéressaient auparavant",
+    question: "J'ai perdu mon intérêt pour des situations qui m'intéressaient auparavant.",
     categories: ['personnel'],
     typeReponse: 'accord'
   },
   // 6
   {
     id: 'sensibilite_sensorielle',
-    question: "Je me sens particulièrement sensible à mon environnement sensoriel (sons, lumières, textures, odeurs…)",
+    question: "Je me sens particulièrement sensible à mon environnement sensoriel (sons, lumières, textures, odeurs…).",
     categories: ['postMasking'],
     typeReponse: 'accord'
   },
   // 7
   {
     id: 'frustration_travail',
-    question: "Mon travail me frustre à un degré",
+    question: "Mon travail me frustre à un degré...",
     categories: ['professionnel'],
     typeReponse: 'intensite'
   },
   // 8
   {
     id: 'epuisement_matin_enfants',
-    question: "Quand je me lève le matin et que j'ai à faire face à une autre journée avec mes enfants, je me sens épuisé(e) d'avance.",
+    question: "Quand je me lève le matin et que j'ai à faire face à une autre journée avec mes enfants, je me sens épuisé·e d'avance.",
     categories: ['parental'],
     typeReponse: 'frequence'
   },
   // 9
   {
     id: 'fatigue',
-    question: "Je suis fatigué(e)",
+    question: "Je suis fatigué·e.",
     categories: ['personnel'],
     typeReponse: 'frequence'
   },
@@ -80,70 +80,70 @@ const QUESTIONNAIRE = [
   // 11
   {
     id: 'epuisement_physique',
-    question: "Je suis physiquement épuisé(e)",
+    question: "Je suis physiquement épuisé·e.",
     categories: ['personnel'],
     typeReponse: 'frequence'
   },
   // 12
   {
     id: 'contact_fatiguant',
-    question: "Le contact avec les autres me fatigue",
+    question: "Le contact avec les autres me fatigue à un degré...",
     categories: ['relationnel'],
     typeReponse: 'intensite'
   },
   // 13
   {
     id: 'sentiment_vide',
-    question: "Je me sens vidé(e)",
+    question: "Je me sens vidé·e.",
     categories: ['personnel'],
     typeReponse: 'frequence'
   },
   // 14
   {
     id: 'heures_travail_eprouvantes',
-    question: "Chaque heure de travail me paraît éprouvante",
+    question: "Chaque heure de travail me paraît éprouvante à un degré...",
     categories: ['professionnel'],
     typeReponse: 'intensite'
   },
   // 15
   {
     id: 'combien_temps_tiendrai',
-    question: "Je me demande combien de temps je tiendrai encore dans cet environnement avec les clients / élèves / patients / camarades de classe",
+    question: "Je me demande combien de temps je tiendrai encore dans cet environnement avec les clients / élèves / patients / camarades de classe.",
     categories: ['relationnel'],
     typeReponse: 'accord'
   },
   // 16
   {
     id: 'perte_estime',
-    question: "Je ressens une perte d'estime de moi, un sentiment de n'être « pas assez bon.ne »",
+    question: "Je ressens une perte d'estime de moi, un sentiment de n'être « pas assez bon.ne ».",
     categories: ['postMasking', 'personnel', 'professionnel'],
     typeReponse: 'accord'
   },
   // 17
   {
     id: 'concentration_difficile',
-    question: "J'ai du mal à me concentrer sur des tâches, que ce soit à la maison, au travail ou à l'école",
+    question: "J'ai du mal à me concentrer sur des tâches, que ce soit à la maison, au travail ou à l'école.",
     categories: ['postMasking', 'personnel', 'professionnel'],
     typeReponse: 'frequence'
   },
   // 18
   {
     id: 'retour_decevant',
-    question: "Considérant tout ce que fais pour les autres, leur retour me déçoit à un degré",
+    question: "Considérant tout ce que fais pour les autres, leur retour me déçoit à un degré...",
     categories: ['relationnel'],
     typeReponse: 'intensite'
   },
   // 19
   {
     id: 'epuisement_emotionnel',
-    question: "Je suis émotionnellement épuisé(e)",
+    question: "Je suis émotionnellement épuisé·e.",
     categories: ['personnel'],
     typeReponse: 'frequence'
   },
   // 20
   {
     id: 'submerge_emotions',
-    question: "Je suis facilement submergé.e par mes émotions",
+    question: "Je suis facilement submergé·e par mes émotions.",
     categories: ['personnel'],
     typeReponse: 'frequence'
   },
@@ -157,91 +157,91 @@ const QUESTIONNAIRE = [
   // 22
   {
     id: 'isolement',
-    question: "Je me renferme et m'isole des autres",
+    question: "Je me renferme et m'isole des autres.",
     categories: ['postMasking', 'relationnel'],
     typeReponse: 'accord'
   },
   // 23
   {
     id: 'vide_fin_journee_travail',
-    question: "Je me sens vidé(e) à la fin d'une journée de travail",
+    question: "Je me sens vidé(e) à la fin d'une journée de travail.",
     categories: ['professionnel'],
     typeReponse: 'frequence'
   },
   // 24
   {
     id: 'travail_epuisant',
-    question: "Mon travail m'épuise à un degré",
+    question: "Mon travail m'épuise à un degré...",
     categories: ['professionnel'],
     typeReponse: 'intensite'
   },
   // 25
   {
     id: 'bout_du_rouleau',
-    question: "Je me dis que je n'en peux plus",
+    question: "Je me dis que je n'en peux plus.",
     categories: ['personnel'],
     typeReponse: 'frequence'
   },
   // 26
   {
     id: 'comportements_apaisement',
-    question: "J'ai de plus en plus besoin d'adopter des comportements d'apaisements ou des gestes répétitifs qui pourraient être mal vus par les autres",
+    question: "J'ai de plus en plus besoin d'adopter des comportements d'apaisements ou des gestes répétitifs qui pourraient être mal perçus par les autres.",
     categories: ['postMasking'],
     typeReponse: 'accord'
   },
   // 27
   {
     id: 'difficulte_collegues',
-    question: "Travailler avec mes collègues / clients / patients / élèves / camarades de classe m'est difficile à un degré",
+    question: "Travailler avec mes collègues / clients / patients / élèves / camarades de classe m'est difficile à un degré...",
     categories: ['relationnel'],
     typeReponse: 'intensite'
   },
   // 28
   {
     id: 'fatigue_parentale_sommeil',
-    question: "Je suis tellement fatigué par mon rôle de parent que j'ai l'impression que dormir ne suffit pas.",
+    question: "Je suis tellement fatigué·e par mon rôle de parent que j'ai l'impression que dormir ne suffit pas.",
     categories: ['parental'],
     typeReponse: 'accord'
   },
   // 29
   {
     id: 'plus_moi_meme_enfants',
-    question: "J'ai l'impression que je ne suis plus moi-même quand j'interagis avec mes enfants",
+    question: "J'ai l'impression que je ne suis plus moi-même quand j'interagis avec mes enfants.",
     categories: ['parental'],
     typeReponse: 'accord'
   },
   // 30
   {
     id: 'frustration_autres',
-    question: "Fonctionner avec les autres est frustrant à un degré",
+    question: "Fonctionner avec les autres est frustrant à un degré...",
     categories: ['relationnel'],
     typeReponse: 'intensite'
   },
   // 31
   {
     id: 'problemes_sommeil',
-    question: "J'ai des problèmes de sommeil, comme du mal à m'endormir ou des rêves perturbants",
+    question: "J'ai des problèmes de sommeil, comme du mal à m'endormir ou des rêves perturbants.",
     categories: ['personnel'],
     typeReponse: 'frequence'
   },
   // 32
   {
     id: 'faible_malade',
-    question: "Je me sens faible et susceptible de tomber malade",
+    question: "Je me sens faible et susceptible de tomber malade.",
     categories: ['personnel'],
     typeReponse: 'frequence'
   },
   // 33
   {
     id: 'perte_fonctions_executives',
-    question: "Je constate une perte de compétences liées aux fonctions exécutives (par exemple, des difficulté à planifier, établir des priorités, me fixer des objectifs...)?",
+    question: "Je constate une perte de compétences liées aux fonctions exécutives (par exemple, des difficulté à planifier, établir des priorités, me fixer des objectifs...).",
     categories: ['postMasking', 'personnel', 'professionnel'],
     typeReponse: 'accord'
   },
   // 34
   {
     id: 'manque_energie_loisirs',
-    question: "Je manque d'énergie dans les activités de loisir avec ma famille et mes amis",
+    question: "Je manque d'énergie dans les activités de loisir avec ma famille et mes amis.",
     categories: ['relationnel'],
     typeReponse: 'accord'
   },

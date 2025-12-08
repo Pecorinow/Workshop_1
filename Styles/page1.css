@@ -110,7 +110,7 @@ main {
         .categoriesBurnout {
             width:100%;
             
-            .categorie {
+            .categorie { /*TODO mettre le même ordre titre-texte pour les cinq catégories, mais faire row-reverse pour parental et peronnel !*/
                 display:flex;
                 flex-direction:row;
                 justify-content: space-between;
@@ -156,7 +156,10 @@ main {
                     
                     p {
                         padding-bottom:0.5rem;
+
                     }
+
+                    
                 }
             }
             .catPro, .catRel, .catPost {
