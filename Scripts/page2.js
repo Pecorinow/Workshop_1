@@ -482,7 +482,7 @@ function calculerScores(REPONSES) {
       if (MOYENNE <= 2) {
         niveau = "Normal";
         explic = "Vos résultats semblent dans la norme. Toutefois, si vous ressentez malgré tout une fatigue excessive ou un sentiment de trop-plein, nous vous invitons à contacter un spécialiste près de chez vous, ou à appeler le numéro spécial de SOS Burn-out 081/39.72.00.";
-      } else if (MOYENNE <= 3) {
+      } else if (MOYENNE <= 3.5) {
         niveau = "À surveiller";
         explic = "Vous semblez présenter quelques symptomes de burn-out. Si votre fatigue persiste ou s'accentue, nous vous invitons à contacter un spécialiste près de chez vous, ou à appeler le numéro spécial de SOS Burn-out 081/39.72.00.";
       } else {
