@@ -343,18 +343,32 @@ footer {
                 gap: 1rem;
     
                 a {
-                    color:white;
-                    text-decoration: none;
-                    text-align: center;
+                color:white;
+                text-decoration: none;
+                text-align: center;
+                position:relative;
+                }   
+
+                a::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: white;
+                    transition: transform 0.25s ease-out;
+                    transform-origin: bottom center;
                 }
-    
-                a:hover {
-                    text-decoration: underline;
+
+                a:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom center;
+                    /*text-decoration: underline;
                     text-decoration-thickness: 2px;
-                    text-underline-offset: 4px;
+                    text-underline-offset: 4px;*/
                 }
-    
-    
             }
         }
 

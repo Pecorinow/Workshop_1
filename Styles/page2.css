@@ -193,7 +193,7 @@ h2 {
             align-items: flex-start;
             gap:0.5rem;
 
-            .niv-normal, .niv-aSurveiller, .niv-preoccupant { /*TODO après mettre les variantes selon la classe */
+            .niv-normal, .niv-aSurveiller, .niv-preoccupant {
                 font-size: 1.7rem;
                 font-weight: 500;
             }
@@ -210,9 +210,6 @@ h2 {
                 color: #e6002a;
             }
         }
-
-
-
     }
 }
 
