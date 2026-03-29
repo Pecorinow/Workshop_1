@@ -12,7 +12,7 @@
     --btn-mode-border : #CEEFFA;
 
     --text-a-font : "Kumbh Sans", sans-serif;
-    --h1-h2-font : "Inter", sans-serif;
+    --h1-h2-font : "Winky Sans", sans-serif;
 }
 
 h2 {
@@ -44,7 +44,7 @@ h2 {
     width: 70%;
     display:flex;
     flex-direction:column;
-    align-items: center;;
+    align-items: center;
     gap:2rem;
     margin-bottom: 2rem;
 

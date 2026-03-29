@@ -12,7 +12,8 @@
     --btn-mode-border : #CEEFFA;
 
     --text-a-font : "Kumbh Sans", sans-serif;
-    --h1-h2-font : "Inter", sans-serif;
+    --h1-h2-font : "Winky Sans", sans-serif;
+    /* --h1-h2-font : "Inter", sans-serif; */
 }
 
 main {
@@ -23,7 +24,7 @@ main {
         align-items: center;
         gap:2rem;
         padding-bottom: 2rem;
-        width:70%;
+        /* width:70%; */
 
         
     }
