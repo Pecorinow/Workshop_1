@@ -137,18 +137,14 @@ h1 {
 h2 {
     color :var(--h2-color);
     text-align: center;
-    /* font-style: italic; */
     font-weight: 400;
     font-size:2.1rem;
     font-family: var(--h1-h2-font);
-    /* padding-top:0.7rem; */
-    /* padding-bottom:0.7rem; */
 
 }
 
 .btn {
     background: #FF7D4A;
-    /* background: var(--btn-border); */
     border:none;
     border-radius: 50px;
     position: relative;
@@ -175,9 +171,9 @@ h2 {
     
 }
 
-.btn:hover .front {
+/* .btn:hover .front {
     transform: translateY(-6px);
-}
+} */
 
 .btn:active .front {
     transform: translateY(-2px);
@@ -216,13 +212,9 @@ h2 {
     }
 }
 
-.btn-2:hover .front {
+/* .btn-2:hover .front {
     transform: translateY(-6px);
-    /* position:relative;
-    top:2px;
-    border-bottom:4px solid var(--btn-dark);
-    margin-bottom:3px; */
-}
+} */
 
 .btn-2:active .front {
     transform: translateY(-2px);
@@ -232,7 +224,89 @@ h2 {
   outline: none;
 }
 
+.btn-hexa {
+    border:none;
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    position:relative;
+    text-decoration: none;
 
+    .front {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width:160px;
+        height:160px;
+        border-radius:50%;
+        background:white;
+        text-decoration: none;
+        font-family: var(--text-a-font);
+        font-size: 1.3rem;
+        font-weight:600;
+        transform: translateY(-6px);
+        will-change: transform;
+        transition: transform 250ms;
+    }
+}
+
+.hexa-blue {
+    background: #5bc0eb;
+
+    .front-blue {
+        color:#5bc0eb;
+        border: 3px solid #5bc0eb;
+    }
+}
+
+.hexa-purple {
+    background: #662e9b;
+
+    .front-purple {
+        color:#662e9b;
+        border: 3px solid #662e9b;
+    }
+}
+
+.hexa-red {
+    background: #ea3546;
+
+    .front-red {
+        color:#ea3546;
+        border: 3px solid #ea3546;
+    }
+}
+
+.hexa-orange {
+    background: #f86624;
+
+    .front-orange {
+        color:#f86624;
+        border: 3px solid #f86624;
+    }
+}
+
+.hexa-yellow {
+    background: #ffaa00;
+
+    .front-yellow {
+        color:#ffaa00;
+        border: 3px solid #ffaa00;
+    }
+}
+
+.btn-hexa:hover .front {
+    transform:translateY(-8px);
+}
+
+.btn-hexa:active .front {
+    transform: translateY(-2px);
+}
+
+.btn-hexa:focus:not(:focus-visible) {
+  outline: none;
+}
 
 main {
     width:100%;

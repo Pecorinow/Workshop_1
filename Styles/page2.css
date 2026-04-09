@@ -84,7 +84,7 @@ h2 {
     }
 }
 
-/*!  NE PAS EFFACER, À REMETTRE EN PLACE APRÈS RÉGLAGES */
+
 .section-resultats-hide {
     display:none;
 }
@@ -94,89 +94,17 @@ h2 {
     flex-direction:column;
     justify-content: space-between;
     align-items: flex-start;
-    gap:2rem;
+    gap:4rem;
 
     .resultats {
         display:flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        gap:3rem;
-
-        .hexagone {
-            position: relative;
-            
-            img {
-                width:150px;
-            }
-
-            .p-cat-pro {
-                position:absolute;
-                left:10%;
-                top:40%;
-                margin:auto;
-                color: var(--twilight-categoriesBurnout);
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
-            .p-cat-parent {
-                position:absolute;
-                left:25%;
-                top:40%;
-                margin:auto;
-                color: var(--twilight-categoriesBurnout);
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
-            .p-cat-rel {
-                position:absolute;
-                left:16%;
-                top:40%;
-                margin:auto;
-                color: var(--twilight-categoriesBurnout);
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
-            .p-cat-perso {
-                position:absolute;
-                left:20%;
-                top:40%;
-                margin:auto;
-                color: var(--twilight-categoriesBurnout);
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
-            .p-cat-post {
-                position:absolute;
-                left:8%;
-                top:40%;
-                margin:auto;
-                color: var(--twilight-categoriesBurnout);
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
-        }
+        gap:4rem;
 
         .moyenne-normal, .moyenne-aSurveiller, .moyenne-preoccupant { 
             font-size:1.3rem;
-            font-style: italic;
-            border : 2px solid;
-            padding: 1rem;
-        }
-
-        .moyenne-normal {
-            color : green;
-            border-color: green;
-        }
-
-        .moyenne-aSurveiller {
-            color: #ffaf10;
-            border-color: #ffaf10;
-        }
-
-        .moyenne-preoccupant {
-            color: #e61f00;
-            border-color: #e61f00;
         }
 
         .niv-explication-btn {
@@ -185,7 +113,6 @@ h2 {
             justify-content: space-between;
             align-items: flex-start;
             gap:0.5rem;
-            max-width:40%;
 
             a {
                 margin-top:0.5rem;
@@ -194,18 +121,7 @@ h2 {
             .niv-normal, .niv-aSurveiller, .niv-preoccupant {
                 font-size: 1.7rem;
                 font-weight: 500;
-            }
-
-            .niv-normal {
-                color : green;
-            }
-
-            .niv-aSurveiller {
-                color: #ffaf10;
-            }
-
-            .niv-preoccupant {
-                color: #e61f00;
+                color:var(--h2-color)
             }
         }
     }
@@ -221,7 +137,7 @@ h2 {
 
     }
     .section-resultats-show {
-        gap:3rem;
+        gap:6rem;
 
         .resultats {
             display:flex;

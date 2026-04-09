@@ -470,27 +470,27 @@ function calculerScores(REPONSES) {
 function afficherResultats(RESULTATS) {
 
     P_CAT_PRO.textContent = "Professionnel"; 
-    P_MOYENNE_PRO.textContent = `Moyenne : ${RESULTATS['professionnel'].MOYENNE}`;
+    P_MOYENNE_PRO.textContent = `Moyenne : ${RESULTATS['professionnel'].MOYENNE} / 5`;
     P_NIV_PRO.textContent = RESULTATS['professionnel'].NIVEAU_INTERP;
     P_EXPLIC_PRO.textContent = RESULTATS['professionnel'].EXPLIC;
 
     P_CAT_PAR.textContent = "Parental";
-    P_MOYENNE_PAR.textContent = `Moyenne : ${RESULTATS['parental'].MOYENNE}`;
+    P_MOYENNE_PAR.textContent = `Moyenne : ${RESULTATS['parental'].MOYENNE} / 5`;
     P_NIV_PAR.textContent = RESULTATS['parental'].NIVEAU_INTERP;
     P_EXPLIC_PAR.textContent = RESULTATS['parental'].EXPLIC;
 
     P_CAT_REL.textContent = "Relationnel";
-    P_MOYENNE_REL.textContent = `Moyenne : ${RESULTATS['relationnel'].MOYENNE}`;
+    P_MOYENNE_REL.textContent = `Moyenne : ${RESULTATS['relationnel'].MOYENNE} / 5`;
     P_NIV_REL.textContent = RESULTATS['relationnel'].NIVEAU_INTERP;
     P_EXPLIC_REL.textContent = RESULTATS['relationnel'].EXPLIC;
 
     P_CAT_PERS.textContent = "Personnel";
-    P_MOYENNE_PERS.textContent = `Moyenne : ${RESULTATS['personnel'].MOYENNE}`;
+    P_MOYENNE_PERS.textContent = `Moyenne : ${RESULTATS['personnel'].MOYENNE} / 5`;
     P_NIV_PERS.textContent = RESULTATS['personnel'].NIVEAU_INTERP;
     P_EXPLIC_PERS.textContent = RESULTATS['personnel'].EXPLIC;
 
     P_CAT_POST.textContent = "Post-masking";
-    P_MOYENNE_POST.textContent = `Moyenne : ${RESULTATS['postMasking'].MOYENNE}`;
+    P_MOYENNE_POST.textContent = `Moyenne : ${RESULTATS['postMasking'].MOYENNE} / 5`;
     P_NIV_POST.textContent = RESULTATS['postMasking'].NIVEAU_INTERP;
     P_EXPLIC_POST.textContent = RESULTATS['postMasking'].EXPLIC;
 
