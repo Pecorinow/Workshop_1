@@ -4,6 +4,7 @@ const BTN_MENU = document.getElementById('menu');
 BTN_MENU.addEventListener('click', () => {
     
     NAV.classList.toggle('nav-show');
+    BTN_MENU.classList.toggle('nav-open');
 
     if (NAV.classList.contains('nav-show')) {
         document.body.style.overflow = 'hidden';

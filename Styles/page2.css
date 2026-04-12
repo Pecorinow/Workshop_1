@@ -1,13 +1,13 @@
 :root {
-    --twilight-header-light :#CE6A85;
-    --twilight-header-dark : #693D53;
-    --twilight-hexagone-light : rgba(206, 106, 133, 0.502); 
-    --twilight-hexagone-dark : rgba(105, 61, 83, 0.5);
-    --twilight-text : #5c374c;
+    --text-color : #5c374c;
     --h2-color :#DE3F00;
-    --twilight-categoriesBurnout : #CC4510;
-    --btn-light: #FF7D4A;
+    --btn-light: #fd8e63;
     --btn-dark: #e3561f;
+    --bg-body :#F0DEEE;
+    --bg-nav : #693D53;
+    --bg-light : linear-gradient(90deg, #F0DEEE, #E1BDDD); 
+    --bg-dark : linear-gradient(90deg, #E8CEE6, #D9ADD5);
+    --border-purple : #BA90B7;
 
     --text-a-font : "Kumbh Sans", sans-serif;
     --h1-h2-font : "Marmelad", sans-serif;

@@ -1,13 +1,13 @@
 :root {
-    --twilight-header-light :#CE6A85;
-    --twilight-header-dark : #693D53;
-    --twilight-hexagone-light : rgb(206, 106, 133, 0.5); 
-    --twilight-hexagone-dark : rgba(105, 61, 83, 0.5);
-    --twilight-text : #5c374c;
+    --text-color : #5c374c;
     --h2-color :#DE3F00;
-    --twilight-categoriesBurnout : #CC4510;
-    --btn-light: #FF7D4A;
+    --btn-light: #fd8e63;
     --btn-dark: #e3561f;
+    --bg-body :#F0DEEE;
+    --bg-nav : #693D53;
+    --bg-light : linear-gradient(90deg, #F0DEEE, #E1BDDD); 
+    --bg-dark : linear-gradient(90deg, #E8CEE6, #D9ADD5);
+    --border-purple : #BA90B7;
 
     --text-a-font : "Kumbh Sans", sans-serif;
     --h1-h2-font : "Marmelad", sans-serif;
@@ -22,8 +22,6 @@ main {
         align-items: flex-start;
         gap:1.5rem;
         width:80%;
-
-        
         
         .img-intro {
             display:flex;
@@ -47,14 +45,12 @@ main {
                     font-family: var(--text-a-font);
                     font-size: 1.5rem;
                     font-weight: 500;
-                    color: var(--twilight-text);
+                    color: var(--text-color);
                     text-align: start;
                 }
 
                 h3 {
                     color :var(--h2-color);
-                    /* text-align: center; */
-                    /* font-style: italic; */
                     font-weight: 400;
                     font-size:2.1rem;
                     font-family: var(--h1-h2-font);
@@ -96,66 +92,15 @@ main {
             width:80%;
         }
 
-        .hexaBurnouts {
+        .linksBurnouts {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             gap:1.5rem;
             flex-wrap: wrap;
             align-content: center;
-
-            .hexagone {
-                position: relative;
-                margin:auto;
-                display: block;
-                transition: transform 200ms ease-out;
-
-                img {
-                    width: 150px;
-                }
-
-                span {
-                    position:absolute;
-                    top:40%;
-                    margin:auto;
-                    
-                    text-decoration: none;
-                    color: var(--twilight-categoriesBurnout);
-                    font-size: 1.2rem;
-
-                    display:flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    gap:0.5rem;
-                }
-
-                .professionnel {
-                    position:absolute;
-                    left:10%;
-                }
-                .parental {
-                    position:absolute;
-                    left:25%;
-                }
-                .relationnel {
-                    position:absolute;
-                    left:16%;
-                }
-                .personnel {
-                    position:absolute;
-                    left:20%;
-                }
-                .post-masking {
-                    position:absolute;
-                    left:8%;
-                }
-            }
-            
-            .hexagone:hover {
-                transform: translateY(-10px);
-            }
+            max-width:80%;
         }
 
         .categoriesBurnout {
@@ -181,6 +126,7 @@ main {
                     
 
                     .icone-h3 {
+                        
                         display:flex;
                         flex-direction: row;
                         justify-content: space-between;
@@ -216,15 +162,10 @@ main {
             }
             .catPro, .catRel, .catPost {
                 flex-direction:row;
-                background: linear-gradient(
-                    90deg,
-                    rgba(206, 106, 133, 0.5) 0%,
-                    rgba(152, 82, 119, 0.3) 100%
-                );
+                background: var(--bg-dark);
             }
 
             .catPar, .catPers {
-                background-color: white;
                 flex-direction:row-reverse;
             }
         }
@@ -261,6 +202,7 @@ main {
 
                 .icone-h3-img .icone-h3 {
                     align-items: center;
+                    
                 }
             }
         }
@@ -275,5 +217,17 @@ main {
     main .section-intro .btn-liens {
         flex-direction: column;
 
+    }
+
+    
+}
+
+/**--------------------*/
+/** Mediaquery 400px : */
+/**--------------------*/
+
+@media (max-width:400px) {
+    main .categoriesBurnout .categorie .icone-h3-img .icone-h3 {
+        max-width: 90%;
     }
 }
